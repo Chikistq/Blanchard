@@ -1,0 +1,20 @@
+@mixin font($fname, $fstyle, $fweight, $furl) {
+  @font-face
+  font-family: $fname;
+  font-style: $fstyle;
+  font-weight: $fweight;
+  src: url($furl) format('woff2');
+
+
+}
+//@include font('oswald-vh', normal, 700, '../fonts/oswaldbold-webfont.woff2')
+
+//@font-face {
+//  font-family: 'Montserrat-m11';
+//  src: local('Montserrat Regular'),
+//  url('../../../../weblayout/11_adaptive-layout-desktop/fonts/montserrat-regular-webfont.woff2') format('woff2'),
+//  url('../../../../weblayout/11_adaptive-layout-desktop/fonts/montserrat-regular-webfont.woff') format('woff');
+//  font-weight: 400;
+//  font-style: normal;
+//  font-display: swap;
+//}

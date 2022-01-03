@@ -1,0 +1,48 @@
+@import "vars";
+@import "fonts";
+@import "bootstrap-grid.min.css";
+@import "normalize.css";
+@import "style";  //основные стили здесь!
+@import "media";
+
+
+:root {
+  $accent-color: #9D5CD0;
+  $hover-color: #C283F3;
+  $active-color: #7943A4;
+  $error-color: #D11616;
+
+}
+
+html {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: inherit;
+  box-sizing: inherit;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  outline: none;
+}
+
+img {
+  max-width: 100%;
+}
+
+body {
+  min-width: 320px;
+  overflow: auto;
+  font-family: 'Montserrat-m11', sans-serif;
+  font-size: 16px;
+  line-height: 1em;
+  color: #333;
+  background-color: #fff;
+  font-weight: 400;
+}
