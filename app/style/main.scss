@@ -1,18 +1,14 @@
 @import "vars";
 @import "fonts";
-@import "bootstrap-grid.min.css";
 @import "normalize.css";
+@import "simplebar.css";
 @import "style";  //основные стили здесь!
-@import "media";
+@import "m-menu";
+@import "ui-kit";
+@import "select-bg";
 
 
-:root {
-  $accent-color: #9D5CD0;
-  $hover-color: #C283F3;
-  $active-color: #7943A4;
-  $error-color: #D11616;
 
-}
 
 html {
   -webkit-box-sizing: border-box;
@@ -37,12 +33,98 @@ img {
 }
 
 body {
+  position: relative;
   min-width: 320px;
   overflow: auto;
-  font-family: 'Montserrat-m11', sans-serif;
+  font-family: 'opensans-1', sans-serif;
   font-size: 16px;
   line-height: 1em;
   color: #333;
   background-color: #fff;
   font-weight: 400;
 }
+
+.container {
+  position: relative;
+  margin: 0 auto;
+  padding: 0 160px;
+  max-width: 1920px;
+}
+
+.flex {
+  display: flex;
+}
+
+.color-invert {
+  color: #fff;
+}
+
+.section-title {
+  font-size: 48px;
+  line-height: 65px;
+  font-weight: 700;
+  color: #333333;
+}
+
+.btn {
+  position: relative;
+  padding: 27px 37px;
+  overflow: hidden;
+  background-color: #9d5cd0;
+  border-radius: 100px;
+  color: #fff;
+  font-weight: 700;
+  outline: none;
+  border: none;
+  letter-spacing: 1.4px;
+  white-space: nowrap;
+}
+
+.header__nav-mobile-button {
+  padding: 15px 86px;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 25px;
+  background-color: inherit;
+  border: 2px solid $accent-color;
+  transform: translateY(60px);
+  opacity: 0;
+  transition: opacity .5s ease-in-out, transform .6s ease-in-out;
+}
+
+.header__nav-mobile-button.open {
+  transform: translateY(0px);
+  opacity: 1;
+}
+
+.mb83 {
+  margin-bottom: 83px;
+}
+
+.visible-hidden {
+  opacity: 0;
+  position: absolute;
+  top: 0;
+}
+
+.display-none {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+.header__search-form_mobile {
+  position: absolute;
+  right: 49px;
+  top: 35px;
+  opacity: 0;
+  transition: transform .4s ease-in-out, opacity .4s ease-in-out;
+  background-color: #18171B;
+  transform: translateX(40px);
+  z-index: -1;
+}
+
+.search-form__close {
+  display: none;
+}
+

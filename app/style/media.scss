@@ -1,0 +1,296 @@
+
+@media only screen and (max-width : 1326px) {
+  .container {
+    padding: 0 50px;
+  }
+
+  .header__second-line_pos,
+  .header__nav,
+  .login-link {
+    display: none;
+  }
+
+  .header__nav-mobile,
+  .header-top__burger,
+  .header__search-link {
+    display: inherit;
+  }
+
+  .header__search-link.display-none + .header__search-form_mobile {
+    transform: translateX(0px);
+    opacity: 1;
+    align-items: center;
+    z-index: 20;
+  }
+
+  .header__logo-link {
+    padding: 28px 0 26px;
+  }
+
+  .header__logo-img {
+    position: relative;
+    height: 44px;
+    left: -3px;
+  }
+
+  .header__title {
+    margin: 114px 0 13px;
+    letter-spacing: 3px;
+  }
+
+  .header__descr {
+    width: 79%;
+    margin: 0 0 127px;
+  }
+
+  .header__button {
+    left: -4px;
+  }
+
+  .button-wrap {
+    margin-bottom: 108px;
+  }
+
+  .about-us__descr {
+    width: 100%;
+  }
+
+  .header-slide-1 {
+    background-image: url('../img/main-slider/slider1-md.jpg');
+  }
+
+  .header-slide-2 {
+    background-image: url('../img/main-slider/slider2-md.jpg');
+  }
+
+  .header-slide-3 {
+    background-image: url('../img/main-slider/slider3-md.jpg');
+  }
+
+
+}
+
+@media only screen and (max-width : 1200px) {
+
+}
+
+
+@media only screen and (max-width : 992px) {
+
+
+
+  .header__title {
+    letter-spacing: 3.5px;
+  }
+
+  .header__descr {
+    width: 100%;
+  }
+
+  .header__search-link.display-none + .header__search-form_mobile {
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 100px;
+    width: 100%;
+    padding: 0 50px;
+    justify-content: space-between;
+  }
+
+  .search-form__close {
+    display: inherit;
+    margin-left: 25px;
+  }
+
+  .header__search-form_mobile label {
+    flex-grow: 1;
+    width: 100%;
+  }
+
+  .search-form__input_mobile {
+    width: 100%;
+    margin: 0;
+    top: 4px;
+  }
+  .search-form__button {
+    top: 2px;
+    position: relative;
+    left: -6px
+  }
+
+
+
+}
+
+@media only screen and (max-width : 768px) {
+
+}
+
+@media only screen and (max-width : 576px) {
+
+  .container {
+    padding: 0 15px;
+  }
+
+  .header__logo-link {
+    padding: 12px 0 8px;
+  }
+
+  .header__logo-img {
+    height: 22px;
+    left: 3px;
+  }
+
+  .search-form__icon {
+    position: relative;
+    right: 1px;
+    top: -1px;
+    width: 18px;
+  }
+
+  #burger {
+    width: 24px;
+    height: 0;
+  }
+
+  #burger span {
+    height: 2px;
+  }
+
+  #burger span:nth-child(2) {
+    top: 8px;
+    width: 68%;
+  }
+
+  #burger span:nth-child(3) {
+    top: 16px;
+    width: 43%;
+  }
+
+  #burger.open span:nth-child(2) {
+    top: 15px;
+  }
+
+  .header__nav-mobile {
+    padding: 45px 15px 15px;
+
+  }
+
+  .header__nav-mobile-lists {
+    margin: 0 0 2px;
+    font-size: 16px;
+    line-height: 32px;
+  }
+
+  .header__nav-mobile-button {
+    padding: 9px 25px;
+    font-size: 12px;
+    line-height: 16px;
+  }
+
+  .header__nav-mobile-list:not(:last-child) {
+    margin-bottom: 0;
+  }
+
+
+  .header__slider-descr {
+    align-items: center;
+    text-align: center;
+  }
+
+  .header__title {
+    width: 100%;
+    margin: 33px 0 11px;
+    font-size: 32px;
+    line-height: 38px;
+    letter-spacing: 1.4px;
+  }
+  .header__descr {
+    width: 100%;
+    margin: 0 0 42px;
+    font-size: 12px;
+    line-height: 16px;
+    font-weight: 400;
+  }
+
+  .header__button {
+    padding: 12px 29px;
+    margin-bottom: 45px;
+    font-size: 12px;
+    line-height: 16px;
+    letter-spacing: -0.3px;
+  }
+
+  .header-slide-1 {
+    background-image: url('../img/main-slider/slider1.jpg');
+  }
+
+  .header-slide-2 {
+    background-image: url('../img/main-slider/slider2.jpg');
+  }
+
+  .header-slide-3 {
+    background-image: url('../img/main-slider/slider3.jpg');
+  }
+
+  .header__search-link.display-none + .header__search-form_mobile {
+    padding: 25px 15px 0 50px;
+    height: 75px;
+  }
+
+  .header__search-link {
+    right: -11px;
+  }
+
+  .search-form__button {
+    top: 0px;
+    left: 1px
+  }
+
+  .search-form__button svg {
+    width: 17px;
+  }
+
+  .search-form__input {
+    position: relative;
+    top: -4px;
+    left: -3px;
+    margin-left: 0px;
+    padding: 0 5px 1px;
+    font-size: 12px;
+    line-height: 16px;
+  }
+
+  .search-form__close {
+    position: relative;
+    top: -28px;
+    width: 20px;
+    margin-left: 32px;
+  }
+
+  .mb83 {
+    margin-bottom: 51px;
+  }
+
+  .section-title {
+    font-size: 28px;
+    line-height: 38px;
+    font-weight: 400;
+  }
+
+  .about-us__title {
+    margin: 0 0 11px;
+  }
+
+  .about-us__descr {
+    width: 100%;
+    margin: 0 0 80px;
+    font-size: 14px;
+    line-height: 28px;
+  }
+
+
+
+
+
+}

@@ -1,3 +1,275 @@
-ul {
-  color: red;
+@import "choices.min.css";
+
+#header {
+  position: relative;
 }
+
+.header__top-line {
+  position: relative;
+  background-color: #000;
+}
+
+.header__top-line_pos {
+  position: relative;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header__logo-link {
+  padding: 30px 0;
+}
+
+.header__nav {
+  position: relative;
+  flex: 0 0 60.4%;
+}
+
+.header__lists {
+  position: relative;
+  top: -2px;
+  left: -41px;
+  padding: 0;
+  margin: 0;
+  justify-content: space-around;
+}
+
+.header__list {
+  list-style: none;
+}
+
+.header__link {
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 25px;
+}
+
+.header__link svg {
+  margin-right: 3px;
+}
+
+.login-link {
+  position: relative;
+  top: -2px;
+  right: -6px;
+  font-weight: 400;
+}
+
+.login-link img {
+  margin-right: 4px;
+}
+
+.header__second-line {
+  position: absolute;
+  left: 0;
+  right: 0;
+  background-color: rgb(#000000, .4);
+  z-index: 10;
+}
+
+.header__second-line_pos {
+  justify-content: space-between;
+}
+
+.header__second-line_selects {
+  padding: 0;
+  margin: 0;
+  justify-content: flex-start;
+}
+
+.choices {
+  top: 16px;
+  margin: 0;
+  padding: 6px 32px 6px 6px;
+  height: 50%;
+  left: -7px;
+  letter-spacing: 0.1px;
+}
+
+.choices[data-type*=select-one]:after {
+  content: '';
+  width: 10px;
+  height: 10px;
+  top: 13px;
+  right: 16px;
+  transform: rotate(45deg);
+  border-color: inherit;
+  border-width: inherit;
+  border-style: inherit;
+  border-bottom: 1px  solid white;
+  border-right: 1px  solid white;
+}
+
+.choices[data-type*=select-one].is-open:after {
+  margin-top: 6px;
+  border-top: 1px  solid white;
+  border-left: 1px  solid white;
+}
+
+.choices__inner {
+  padding: 0;
+  background-color: inherit;
+  border: none;
+  font-size: 18px;
+  line-height: 25px;
+}
+
+.choices:not(:last-child) {
+  margin-right: 81px;
+}
+.choices__list--dropdown,
+.choices__item,
+.choices__inner,
+.header__select,
+.choices__input,
+.choices[data-type*=select-one] .choices__inner {
+  padding: 0;
+
+}
+
+.choices__list--dropdown .choices__item--selectable {
+  padding-right: 0;
+  color: #fff;
+}
+
+.choices__list--dropdown.is-active {
+  left: 0px;
+  top: 52px;
+  width: 300px;
+  padding: 40px 33px 30px 48px;
+  background-color: rgba(0, 0, 0, 0.6);
+  border: none;
+}
+
+.choices__item--choice {
+  margin-bottom: 25px;
+}
+
+.choices__list--single {
+  padding: 0;
+}
+
+.header__search-form {
+  align-items: center;
+  position: relative;
+  top: 2px;
+  padding: 21px 0;
+}
+
+.search-form__input,
+.search-form__button {
+  background-color: inherit;
+  border: none;
+  cursor: pointer;
+  pointer-events: auto;
+}
+
+.search-form__input {
+  margin-left: 3px;
+  padding: 0 0 3px;
+  width: 220px;
+  border-bottom: 1px solid #fff;
+  color: #fff;
+  letter-spacing: 0.5px;
+  transition: border-bottom-color .3s ease-in-out, opacity 0.3s ease-in-out, width .3s cubic-bezier(.74,.09,.16,.93);
+}
+
+.search-form__input_mobile {
+  position: relative;
+  top: 2px;
+}
+
+.search-form__input::placeholder {
+  padding: 0;
+  margin: 0;
+  color: #fff;
+  font-size: 18px;
+  line-height: 25px;
+  transition: opacity .3s ease-in-out;
+}
+
+.header__search-link {
+  position: relative;
+  display: none;
+  width: 28px;
+}
+
+
+.slider-wrap {
+  position: relative;
+}
+
+.slider-wrap .swiper {
+  position: absolute;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.slide-img  {
+  min-height: 620px;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.header-slide-1 {
+  background-image: url('../img/main-slider/slider1-lg.jpg');
+}
+
+.header-slide-2 {
+  background-image: url('../img/main-slider/slider2-lg.jpg');
+}
+
+.header-slide-3 {
+  background-image: url('../img/main-slider/slider3-lg.jpg');
+}
+
+.header__slider-descr {
+  position: relative;
+  flex-direction: column;
+  align-items: flex-start;
+  z-index: 5;
+  pointer-events: none;
+}
+
+.header__title {
+  width: 50%;
+  margin: 140px 0 21px;
+  font-size: 72px;
+  line-height: 82px;
+  font-weight: 700;
+  letter-spacing: 4px;
+}
+
+.header__descr {
+  width: 36%;
+  margin: 0 0 90px;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 30px;
+  letter-spacing: 0.7px;
+}
+
+.header__button {
+  pointer-events: auto;
+  margin-bottom: 120px;
+  transition: background-color .3s ease-in-out, outline .1s ease-in-out;
+}
+
+.about-us {
+}
+
+.about-us__title {
+  margin: 0 0 14px;
+}
+
+.about-us__descr {
+  width: 70%;
+  margin: 0 0 80px;
+  font-size: 16px;
+  line-height: 32px;
+  letter-spacing: 0.6px;
+}
+
+
+

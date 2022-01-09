@@ -13,7 +13,237 @@
   <title>Blanchard — художественная галерея</title>
 </head>
 <body>
-<h1>Проверка</h1>
-<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium blanditiis, cumque deserunt labore magnam necessitatibus nisi, quae quasi saepe sed similique sint totam. Aperiam esse eveniet laborum quia quis vero.</p>
+  <header id="header" class="color-invert mb83">
+
+    <nav class="header__nav-mobile">
+      <ul class="header__nav-mobile-lists nav-mobile_active">
+        <li class="header__nav-mobile-list">
+          <a href="#" class="">О нас</a>
+        </li>
+        <li class="header__nav-mobile-list">
+          <a href="#" class="">Галерея</a>
+        </li>
+        <li class="header__nav-mobile-list">
+          <a href="#" class="">Каталог</a>
+        </li>
+        <li class="header__nav-mobile-list">
+          <a href="#" class="">События</a>
+        </li>
+        <li class="header__nav-mobile-list">
+          <a href="#" class="">Издания</a>
+        </li>
+        <li class="header__nav-mobile-list">
+          <a href="#" class="">Проекты</a>
+        </li>
+        <li class="header__nav-mobile-list">
+          <a href="#" class="">Контакты</a>
+        </li>
+      </ul>
+
+      <button class="btn header__nav-mobile-button">
+        <svg width="13" height="13" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M5.12056 9.09278L6.13889 10.1111L9.75 6.5L6.13889 2.88889L5.12056 3.90722L6.98389 5.77778H0V7.22222H6.98389L5.12056 9.09278ZM11.5556 0H1.44444C0.642778 0 0 0.65 0 1.44444V4.33333H1.44444V1.44444H11.5556V11.5556H1.44444V8.66667H0V11.5556C0 12.35 0.642778 13 1.44444 13H11.5556C12.35 13 13 12.35 13 11.5556V1.44444C13 0.65 12.35 0 11.5556 0Z" fill="white"/>
+        </svg>
+
+        Войти
+      </button>
+    </nav>
+
+    <div class="header__top-line">
+      <div class="header__top-line_pos container flex">
+
+        <div id="burger" class="header-top__burger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+
+        <a href="/" class="header__logo-link">
+          <img class="header__logo-img" src="img/logo.svg" alt="Blanchard — художественная галерея">
+        </a>
+
+        <nav class="header__nav">
+          <ul class="header__lists flex">
+            <li class="header__list">
+              <a href="#" class="header__link links">
+                О нас
+              </a>
+            </li>
+            <li class="header__list">
+              <a href="#" class="header__link links">
+                Галерея
+              </a>
+            </li>
+            <li class="header__list">
+              <a href="#" class="header__link links">
+                Каталог
+              </a>
+            </li>
+            <li class="header__list">
+              <a href="#" class="header__link links">
+                События
+              </a>
+            </li>
+            <li class="header__list">
+              <a href="#" class="header__link links">
+                Издания
+              </a>
+            </li>
+            <li class="header__list">
+              <a href="#" class="header__link links">
+                Проекты
+              </a>
+            </li>
+            <li class="header__list">
+              <a href="#" class="header__link links">
+                Константы
+              </a>
+            </li>
+          </ul>
+        </nav>
+
+        <a href="#" class="header__link login-link links">
+          <svg width="13" height="13" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M5.12056 9.09278L6.13889 10.1111L9.75 6.5L6.13889 2.88889L5.12056 3.90722L6.98389 5.77778H0V7.22222H6.98389L5.12056 9.09278ZM11.5556 0H1.44444C0.642778 0 0 0.65 0 1.44444V4.33333H1.44444V1.44444H11.5556V11.5556H1.44444V8.66667H0V11.5556C0 12.35 0.642778 13 1.44444 13H11.5556C12.35 13 13 12.35 13 11.5556V1.44444C13 0.65 12.35 0 11.5556 0Z" fill="white"/>
+          </svg>
+
+          Войти
+        </a>
+
+        <!--        поиск, раскрытие с 1024px -->
+        <a href="#" class="header__search-link">
+          <svg class="search-form__icon" width="30" height="29" viewBox="0 0 30 29" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect width="9.15446" height="2.28862" transform="matrix(-0.718931 0.695081 0.718931 0.695081 6.58154 21.0461)" fill="white"/>
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M16.1246 24.174C10.0376 24.174 5.32763 19.2726 5.32763 13.5104C5.32763 7.74823 10.0376 2.84676 16.1246 2.84676C22.2115 2.84676 26.9215 7.74823 26.9215 13.5104C26.9215 19.2726 22.2115 24.174 16.1246 24.174ZM16.1246 26.8399C8.76285 26.8399 2.79502 20.8721 2.79502 13.5104C2.79502 6.14869 8.76285 0.180847 16.1246 0.180847C23.4863 0.180847 29.4541 6.14869 29.4541 13.5104C29.4541 20.8721 23.4863 26.8399 16.1246 26.8399Z" fill="white"/>
+          </svg>
+        </a>
+
+        <form class="header__search-form_mobile flex" name="search" method="get">
+
+          <button aria-label="найти" class="search-form__button" type="submit" >
+            <svg class="search-form__icon" width="30" height="29" viewBox="0 0 30 29" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect width="9.15446" height="2.28862" transform="matrix(-0.718931 0.695081 0.718931 0.695081 6.58154 21.0461)" fill="white"/>
+              <path fill-rule="evenodd" clip-rule="evenodd" d="M16.1246 24.174C10.0376 24.174 5.32763 19.2726 5.32763 13.5104C5.32763 7.74823 10.0376 2.84676 16.1246 2.84676C22.2115 2.84676 26.9215 7.74823 26.9215 13.5104C26.9215 19.2726 22.2115 24.174 16.1246 24.174ZM16.1246 26.8399C8.76285 26.8399 2.79502 20.8721 2.79502 13.5104C2.79502 6.14869 8.76285 0.180847 16.1246 0.180847C23.4863 0.180847 29.4541 6.14869 29.4541 13.5104C29.4541 20.8721 23.4863 26.8399 16.1246 26.8399Z" fill="white"/>
+            </svg>
+          </button>
+
+          <label for="f-search">
+            <span class="visible-hidden">Поиск по сайту</span>
+            <input tabindex="0" class="search-form__input search-form__input_mobile" id="f-search" type="text" placeholder="" name="search" value="">
+          </label>
+
+          <svg class="search-form__close" width="29" height="29" viewBox="0 0 29 29" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <g opacity="0.7">
+              <rect width="37.2801" height="3.72801" transform="matrix(0.707093 0.707121 -0.707093 0.707121 2.63867 0)" fill="white"/>
+              <rect width="37.2801" height="3.72801" transform="matrix(0.707093 -0.707121 0.707093 0.707121 -0.000976562 26.3615)" fill="white"/>
+            </g>
+          </svg>
+
+        </form>
+        <!--        поиск, с декстоп-версии - конец -->
+
+      </div>
+
+
+    </div>
+
+    <div class="header__second-line">
+      <div class="header__second-line_pos container flex">
+
+        <div class="header__second-line_selects flex">
+          <select class="header__select" name="select" id="select1" data-simplebar>
+            <option selected>Тинторетто</option>
+            <option selected>Фридрих</option>
+            <option selected>Леонардо</option>
+            <option selected>Верроккьо</option>
+          </select>
+
+          <select class="header__select" name="select" id="select2" data-simplebar>
+            <option selected>Импрессионизм</option>
+          </select>
+
+          <select class="header__select" name="select" id="select3">
+            <option selected>Постимпрессионизм</option>
+          </select>
+
+          <select class="header__select" name="select" id="select4">
+            <option selected>Авангард</option>
+          </select>
+
+          <select class="header__select" name="select" id="select5">
+            <option selected>Футуризм</option>
+          </select>
+        </div>
+
+        <form class="header__search-form flex" name="search" method="get">
+
+          <button aria-label="найти" class="search-form__button" type="submit" >
+            <svg class="search-form__search" width="23" height="22" viewBox="0 0 23 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect width="6.8678" height="1.71695" transform="matrix(-0.718931 0.695081 0.718931 0.695081 4.9375 15.6534)" fill="white"/>
+              <path fill-rule="evenodd" clip-rule="evenodd" d="M12.0969 18C7.53041 18 3.99692 14.3229 3.99692 10C3.99692 5.67715 7.53041 2 12.0969 2C16.6634 2 20.1969 5.67715 20.1969 10C20.1969 14.3229 16.6634 18 12.0969 18ZM12.0969 20C6.57408 20 2.09692 15.5228 2.09692 10C2.09692 4.47715 6.57408 0 12.0969 0C17.6198 0 22.0969 4.47715 22.0969 10C22.0969 15.5228 17.6198 20 12.0969 20Z" fill="white"/>
+            </svg>
+          </button>
+
+          <label for="form-search">
+            <span class="visible-hidden">Поиск по сайту</span>
+            <input tabindex="0" class="search-form__input" id="form-search" type="text" placeholder="Поиск по сайту" name="search" value="">
+          </label>
+
+
+        </form>
+
+
+      </div>
+
+
+    </div>
+
+    <div class="slider-wrap">
+      <div class="swiper sw-position">
+        <div class="swiper-wrapper">
+          <!-- Slides -->
+          <div class="swiper-slide slide-img header-slide-1"></div>
+          <div class="swiper-slide slide-img header-slide-2"></div>
+          <div class="swiper-slide slide-img header-slide-3"></div>
+        </div>
+
+        <!-- If we need pagination -->
+        <div class="swiper-pagination"></div>
+      </div>
+
+      <div class="header__slider-descr container flex">
+        <h1 class="header__title">
+          Прикоснитесь к&nbsp;прекрасному
+        </h1>
+        <p class="header__descr">
+          Мы&nbsp;вынуждены отталкиваться от&nbsp;того, что реализация намеченных плановых заданий создаёт предпосылки для новых предложений.
+        </p>
+
+        <button aria-label="Подписаться на рассылку" class="btn header__button">
+          Подписаться на рассылку
+        </button>
+
+      </div>
+    </div>
+
+
+  </header>
+
+  <main id="main">
+    <section class="about-us container">
+      <h2 class="about-us__title section-title">
+        О нас
+      </h2>
+      <p class="about-us__descr">
+        Ясность нашей позиции очевидна: семантический разбор внешних противодействий однозначно определяет каждого участника как способного принимать собственные решения касаемо распределения внутренних резервов и&nbsp;ресурсов. Не&nbsp;следует, однако, забывать, что высококачественный прототип будущего проекта влечет за&nbsp;собой процесс внедрения и&nbsp;модернизации модели развития. Повседневная практика показывает, что высокое качество позиционных исследований создаёт необходимость включения в&nbsp;производственный план целого ряда внеочередных мероприятий с&nbsp;учётом комплекса распределения внутренних резервов и&nbsp;ресурсов. В&nbsp;рамках спецификации современных стандартов, действия представителей оппозиции набирают популярность среди определенных слоев населения, а&nbsp;значит, должны быть разоблачены.
+      </p>
+    </section>
+
+  </main>
+
+  <footer id="footer">
+
+  </footer>
+
 </body>
 </html>

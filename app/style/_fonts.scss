@@ -1,20 +1,35 @@
-@mixin font($fname, $fstyle, $fweight, $furl) {
-  @font-face
-  font-family: $fname;
-  font-style: $fstyle;
-  font-weight: $fweight;
-  src: url($furl) format('woff2');
-
-
+@font-face {
+  font-family: 'opensans-1';
+  src: local('Open Sans'), url("../fonts/opensans-bold-webfont.woff2") format("woff2"),
+  url("../fonts/opensans-bold-webfont.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
 }
-//@include font('oswald-vh', normal, 700, '../fonts/oswaldbold-webfont.woff2')
 
-//@font-face {
-//  font-family: 'Montserrat-m11';
-//  src: local('Montserrat Regular'),
-//  url('../../../../weblayout/11_adaptive-layout-desktop/fonts/montserrat-regular-webfont.woff2') format('woff2'),
-//  url('../../../../weblayout/11_adaptive-layout-desktop/fonts/montserrat-regular-webfont.woff') format('woff');
-//  font-weight: 400;
-//  font-style: normal;
-//  font-display: swap;
-//}
+@font-face {
+  font-family: 'opensans-1';
+  src: local('Open Sans'), url("../fonts/opensans-regular-webfont.woff2") format("woff2"),
+  url("../fonts/opensans-regular-webfont.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'opensans-1';
+  src: local('Open Sans'), url("../fonts/opensans-regular-webfont.woff2") format("woff2"),
+  url("../fonts/opensans-regular-webfont.woff") format("woff");
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'opensans-1';
+  src: local('Open Sans'), url("../fonts/opensans-semibold-webfont.woff2") format("woff2"),
+  url("../fonts/opensans-semibold-webfont.woff") format("woff");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}

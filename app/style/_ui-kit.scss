@@ -1,0 +1,96 @@
+
+.links {
+  position: relative;
+  padding: 6px;
+  transition: color .3s ease-in-out, background-color 0.3s ease-in-out;
+  z-index: 1;
+}
+
+
+.links:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  width: calc(100% + 2px);
+  height: calc(100% + 2px);
+}
+
+.links path {
+  transition: fill .3s ease-in-out;
+}
+
+
+.links:focus,
+.choices:focus {
+  background-color: $active-color;
+}
+
+.links:hover,
+.choices:hover {
+  color: $hover-color;
+}
+
+
+.links:active,
+.choices:active {
+  color: $active-color;
+  background-color: inherit;
+ }
+
+
+.links:hover path {
+  fill: $hover-color;
+}
+
+
+.links:active path {
+  fill: $active-color;
+}
+
+.search-form__input:focus {
+  outline: none;
+  border-bottom: 1px solid $hover-color;
+}
+
+.search-form__input:focus::placeholder {
+  opacity: 0;
+}
+
+.search-form__input:hover {
+  border-bottom: 1px solid $hover-color;
+}
+
+.search-form__input:active {
+  border-bottom: 1px solid $active-color;
+}
+
+.header__button:focus {
+  outline: 2px solid $hover-color;
+  outline-offset: 5px;
+}
+
+.header__button:hover {
+  outline: 3px solid #D1A9F0;
+  outline-offset: 0px;
+}
+
+.header__button:active {
+  outline: 3px solid #D1A9F0;
+  background-color: $active-color;
+  outline-offset: 0px;
+}
+
+
+
+
+
+
+
+
+
+
+
+

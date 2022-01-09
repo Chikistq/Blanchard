@@ -5,6 +5,7 @@
     "node": true,
     "browser": true
   },
+  "ignorePatterns": ["choices.js"],
   "rules": {
     "semi": "off",
     "linebreak-style": "off",
@@ -12,7 +13,13 @@
     "arrow-parens": "off",
     "new-cap": "off",
     "comma-dangle": "off",
-    "operator-linebreak": "off"
+    "operator-linebreak": "off",
+    "quotes": "off",
+    "padded-blocks": "off",
+    "no-multiple-empty-lines": "off"
   },
-  "extends": ["eslint:recommended", "google"]
+  "extends": [
+    "eslint:recommended",
+    "google"
+  ]
 }
