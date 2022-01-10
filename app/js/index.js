@@ -1,13 +1,16 @@
 import '@/index.html'
 import '@/style/main.scss'
-import '@/js/simplebar.min'
 import '@/style/media.scss'
 
-import Swiper from 'swiper';
-import 'swiper/css';
+
+import '@/js/simplebar.min';
+import '@/style/simplebar.css'
+
+import Swiper from 'swiper'
+import 'swiper/css'
 
 import Choices from 'choices.js'
-import {$} from './Dom';
+import {$} from './Dom'
 
 
 document.addEventListener('DOMContentLoaded', function() {
@@ -82,6 +85,11 @@ document.addEventListener('DOMContentLoaded', function() {
   })
   /* search active end */
 
+  /*  симпл-бар...ломает верстку, т.к. second-line у меня с position: absolute
+  * позже придумаю */
+  // document.querySelectorAll('.choices__list--dropdown').forEach(el => {
+  //   el.setAttribute('data-simplebar', '')
+  // })
 
 
 

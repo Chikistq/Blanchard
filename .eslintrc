@@ -5,7 +5,7 @@
     "node": true,
     "browser": true
   },
-  "ignorePatterns": ["choices.js"],
+  "ignorePatterns": ["choices.js", "simplebar.css", "simplebar.min.js"],
   "rules": {
     "semi": "off",
     "linebreak-style": "off",
