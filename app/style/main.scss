@@ -5,8 +5,7 @@
 @import "m-menu";
 @import "ui-kit";
 @import "select-bg";
-
-
+@import "modal";
 
 
 html {
@@ -46,7 +45,8 @@ body {
 .container {
   position: relative;
   margin: 0 auto;
-  padding: 0 160px;
+  padding-left: 160px;
+  padding-right: 160px;
   max-width: 1920px;
 }
 
@@ -61,8 +61,7 @@ body {
 .section-title {
   font-size: 48px;
   line-height: 65px;
-  font-weight: 700;
-  color: #333333;
+  font-weight: 400;
 }
 
 .btn {
@@ -127,3 +126,7 @@ body {
   display: none;
 }
 
+//
+//* {
+//  outline: 1px solid red;
+//}

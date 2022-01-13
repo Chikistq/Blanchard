@@ -13,6 +13,7 @@
   <title>Blanchard — художественная галерея</title>
 </head>
 <body>
+
   <header id="header" class="color-invert mb83">
 
     <nav class="header__nav-mobile">
@@ -165,7 +166,7 @@
             <option value="Сислей">Сислей</option>
             <option value="Мане">Мане</option>
             <option value="Ренуар">Ренуар</option>
-            <option selected disabled hidden>Импрессионизм</option>
+            <option selected disabled value="">Импрессионизм</option>
           </select>
 
           <select class="header__select" name="select" id="select3">
@@ -216,8 +217,8 @@
 
     </div>
 
-    <div class="slider-wrap">
-      <div class="swiper sw-position">
+    <div class="header__slider">
+      <div class="header__slider_swiper swiper">
         <div class="swiper-wrapper">
           <!-- Slides -->
           <div class="swiper-slide slide-img header-slide-1"></div>
@@ -226,7 +227,7 @@
         </div>
       </div>
 
-      <div class="header__slider-descr container flex">
+      <div class="header__slider-descr  flex container">
         <h1 class="header__title">
           Прикоснитесь к&nbsp;прекрасному
         </h1>
@@ -237,15 +238,15 @@
         <button aria-label="Подписаться на рассылку" class="btn header__button">
           Подписаться на рассылку
         </button>
-
       </div>
+
     </div>
 
 
   </header>
 
   <main id="main">
-    <section class="about-us container">
+    <section id="about-us" class="about-us container">
       <h2 class="about-us__title section-title">
         О нас
       </h2>
@@ -254,11 +255,234 @@
       </p>
     </section>
 
+    <section id="gallery" class="gallery color-invert">
+
+      <div class="container flex gallery-wrap">
+
+
+
+        <div class="gallery__filter">
+          <h2 class="gallery__filter-title section-title">
+            Галерея
+          </h2>
+
+          <label for="filter">
+              <span class="gallery__filter-label">
+                Фильтр:
+              </span>
+            <select class="gallery__filter-select" name="filter" id="filter">
+              <option value="Живопись">Живопись</option>
+              <option value="Рисунок">Рисунок</option>
+              <option value="Скульптура">Скульптура</option>
+            </select>
+          </label>
+
+        </div>
+
+        <div class="gallery__slider">
+
+          <div class=" swiper swiper-gallery">
+              <!-- Additional required wrapper -->
+              <div class="swiper-wrapper">
+                <!-- Slides -->
+                <div class="swiper-slide">
+                  <picture class="gallery__slider-img">
+                    <source media="(max-width: 576px)" srcset="img/gallery/mob/mobile1.jpg">
+                    <source media="(max-width: 992px)" srcset="img/gallery/sm/smgallery1.jpg">
+                    <img data-id="1" src="img/gallery/lg/gallery1.jpg" class="gallery__slider-img" alt="Картина 1">
+                  </picture>
+                </div>
+                <div class="swiper-slide">
+                  <picture class="gallery__slider-img">
+                    <source media="(max-width: 576px)" srcset="img/gallery/mob/mobile2.jpg">
+                    <source media="(max-width: 992px)" srcset="img/gallery/sm/smgallery2.jpg">
+                    <img data-id="2" src="img/gallery/lg/gallery2.jpg" class="gallery__slider-img" alt="Картина 2">
+                  </picture>
+                </div>
+                <div class="swiper-slide">
+                  <picture class="gallery__slider-img">
+                    <source media="(max-width: 576px)" srcset="img/gallery/mob/mobile3.jpg">
+                    <source media="(max-width: 992px)" srcset="img/gallery/sm/smgallery3.jpg">
+                    <img data-id="3" src="img/gallery/lg/gallery3.jpg" class="gallery__slider-img" alt="Картина 3">
+                  </picture>
+                </div>
+                <div class="swiper-slide">
+                  <picture class="gallery__slider-img">
+                    <source media="(max-width: 576px)" srcset="img/gallery/mob/mobile4.jpg">
+                    <source media="(max-width: 992px)" srcset="img/gallery/sm/smgallery4.jpg">
+                    <img data-id="4" src="img/gallery/lg/gallery4.jpg" class="gallery__slider-img" alt="Картина 4">
+                  </picture>
+                </div>
+                <div class="swiper-slide">
+                  <picture class="gallery__slider-img">
+                    <source media="(max-width: 576px)" srcset="img/gallery/mob/mobile5.jpg">
+                    <source media="(max-width: 992px)" srcset="img/gallery/sm/smgallery5.jpg">
+                    <img data-id="5" src="img/gallery/lg/gallery5.jpg" class="gallery__slider-img" alt="Картина 5">
+                  </picture>
+                </div>
+                <div class="swiper-slide">
+                  <picture class="gallery__slider-img">
+                    <source media="(max-width: 576px)" srcset="img/gallery/mob/mobile6.jpg">
+                    <source media="(max-width: 992px)" srcset="img/gallery/sm/smgallery6.jpg">
+                    <img data-id="6" src="img/gallery/lg/gallery6.jpg" class="gallery__slider-img" alt="Картина 6">
+                  </picture>
+                </div>
+                <div class="swiper-slide">
+                  <picture class="gallery__slider-img">
+                    <source media="(max-width: 576px)" srcset="img/gallery/mob/mobile7.jpg">
+                    <source media="(max-width: 992px)" srcset="img/gallery/sm/smgallery7.jpg">
+                    <img data-id="7" src="img/gallery/lg/gallery7.jpg" class="gallery__slider-img" alt="Картина 7">
+                  </picture>
+                </div>
+                <div class="swiper-slide">
+                  <picture class="gallery__slider-img">
+                    <source media="(max-width: 576px)" srcset="img/gallery/mob/mobile8.jpg">
+                    <source media="(max-width: 992px)" srcset="img/gallery/sm/smgallery8.jpg">
+                    <img data-id="8" src="img/gallery/lg/gallery8.jpg" class="gallery__slider-img" alt="Картина 8">
+                  </picture>
+                </div>
+                <div class="swiper-slide">
+                  <picture class="gallery__slider-img">
+                    <source media="(max-width: 576px)" srcset="img/gallery/mob/mobile9.jpg">
+                    <source media="(max-width: 992px)" srcset="img/gallery/sm/smgallery9.jpg">
+                    <img data-id="9" src="img/gallery/lg/gallery9.jpg" class="gallery__slider-img" alt="Картина 9">
+                  </picture>
+                </div>
+                <div class="swiper-slide">
+                  <picture class="gallery__slider-img">
+                    <source media="(max-width: 576px)" srcset="img/gallery/mob/mobile10.jpg">
+                    <source media="(max-width: 992px)" srcset="img/gallery/sm/smgallery10.jpg">
+                    <img data-id="10" src="img/gallery/lg/gallery10.jpg" class="gallery__slider-img" alt="Картина 10">
+                  </picture>
+                </div>
+                <div class="swiper-slide">
+                  <picture class="gallery__slider-img">
+                    <source media="(max-width: 576px)" srcset="img/gallery/mob/mobile11.jpg">
+                    <source media="(max-width: 992px)" srcset="img/gallery/sm/smgallery11.jpg">
+                    <img data-id="11" src="img/gallery/lg/gallery11.jpg" class="gallery__slider-img" alt="Картина 11">
+                  </picture>
+                </div>
+                <div class="swiper-slide">
+                  <picture class="gallery__slider-img">
+                    <source media="(max-width: 576px)" srcset="img/gallery/mob/mobile12.jpg">
+                    <source media="(max-width: 992px)" srcset="img/gallery/sm/smgallery12.jpg">
+                    <img data-id="12" src="img/gallery/lg/gallery12.jpg" class="gallery__slider-img" alt="Картина 12">
+                  </picture>
+                </div>
+                <div class="swiper-slide">
+                  <picture class="gallery__slider-img">
+                    <source media="(max-width: 576px)" srcset="img/gallery/mob/mobile13.jpg">
+                    <source media="(max-width: 992px)" srcset="img/gallery/sm/smgallery13.jpg">
+                    <img data-id="13" src="img/gallery/lg/gallery13.jpg" class="gallery__slider-img" alt="Картина 13">
+                  </picture>
+                </div>
+                <div class="swiper-slide">
+                  <picture class="gallery__slider-img">
+                    <source media="(max-width: 576px)" srcset="img/gallery/mob/mobile14.jpg">
+                    <source media="(max-width: 992px)" srcset="img/gallery/sm/smgallery14.jpg">
+                    <img data-id="14" src="img/gallery/lg/gallery14.jpg" class="gallery__slider-img" alt="Картина 14">
+                  </picture>
+                </div>
+                <div class="swiper-slide">
+                  <picture class="gallery__slider-img">
+                    <source media="(max-width: 576px)" srcset="img/gallery/mob/mobile15.jpg">
+                    <source media="(max-width: 992px)" srcset="img/gallery/sm/smgallery15.jpg">
+                    <img data-id="15" src="img/gallery/lg/gallery15.jpg" class="gallery__slider-img" alt="Картина 15">
+                  </picture>
+                </div>
+                <div class="swiper-slide">
+                  <picture class="gallery__slider-img">
+                    <source media="(max-width: 576px)" srcset="img/gallery/mob/mobile16.jpg">
+                    <source media="(max-width: 992px)" srcset="img/gallery/sm/smgallery16.jpg">
+                    <img data-id="16" src="img/gallery/lg/gallery16.jpg" class="gallery__slider-img" alt="Картина 16">
+                  </picture>
+                </div>
+                <div class="swiper-slide">
+                  <picture class="gallery__slider-img">
+                    <source media="(max-width: 576px)" srcset="img/gallery/mob/mobile17.jpg">
+                    <source media="(max-width: 992px)" srcset="img/gallery/sm/smgallery17.jpg">
+                    <img data-id="17" src="img/gallery/lg/gallery17.jpg" class="gallery__slider-img" alt="Картина 17">
+                  </picture>
+                </div>
+                <div class="swiper-slide">
+                  <picture class="gallery__slider-img">
+                    <source media="(max-width: 576px)" srcset="img/gallery/mob/mobile18.jpg">
+                    <source media="(max-width: 992px)" srcset="img/gallery/sm/smgallery18.jpg">
+                    <img data-id="18" src="img/gallery/lg/gallery18.jpg" class="gallery__slider-img" alt="Картина 18">
+                  </picture>
+                </div>
+                <div class="swiper-slide">
+                  <picture class="gallery__slider-img">
+                    <source media="(max-width: 576px)" srcset="img/gallery/mob/mobile19.jpg">
+                    <source media="(max-width: 992px)" srcset="img/gallery/sm/smgallery19.jpg">
+                    <img data-id="19" src="img/gallery/lg/gallery19.jpg" class="gallery__slider-img" alt="Картина 19">
+                  </picture>
+                </div>
+                <div class="swiper-slide">
+                  <picture class="gallery__slider-img">
+                    <source media="(max-width: 576px)" srcset="img/gallery/mob/mobile20.jpg">
+                    <source media="(max-width: 992px)" srcset="img/gallery/sm/smgallery20.jpg">
+                    <img data-id="20" src="img/gallery/lg/gallery20.jpg" class="gallery__slider-img" alt="Картина 20">
+                  </picture>
+                </div>
+                <div class="swiper-slide">
+                  <picture class="gallery__slider-img">
+                    <source media="(max-width: 576px)" srcset="img/gallery/mob/mobile21.jpg">
+                    <source media="(max-width: 992px)" srcset="img/gallery/sm/smgallery21.jpg">
+                    <img data-id="21" src="img/gallery/lg/gallery21.jpg" class="gallery__slider-img" alt="Картина 21">
+                  </picture>
+                </div>
+                <div class="swiper-slide">
+                  <picture class="gallery__slider-img">
+                    <source media="(max-width: 576px)" srcset="img/gallery/mob/mobile22.jpg">
+                    <source media="(max-width: 992px)" srcset="img/gallery/sm/smgallery22.jpg">
+                    <img data-id="22" src="img/gallery/lg/gallery22.jpg" class="gallery__slider-img" alt="Картина 22">
+                  </picture>
+                </div>
+                <div class="swiper-slide">
+                  <picture class="gallery__slider-img">
+                    <source media="(max-width: 576px)" srcset="img/gallery/mob/mobile23.jpg">
+                    <source media="(max-width: 992px)" srcset="img/gallery/sm/smgallery23.jpg">
+                    <img data-id="23" src="img/gallery/lg/gallery23.jpg" class="gallery__slider-img" alt="Картина 23">
+                  </picture>
+                </div>
+                <div class="swiper-slide">
+                  <picture class="gallery__slider-img">
+                    <source media="(max-width: 576px)" srcset="img/gallery/mob/mobile24.jpg">
+                    <source media="(max-width: 992px)" srcset="img/gallery/sm/smgallery24.jpg">
+                    <img data-id="24" src="img/gallery/lg/gallery24.jpg" class="gallery__slider-img" alt="Картина 24">
+                  </picture>
+                </div>
+              </div>
+
+              <!-- If we need pagination -->
+              <div class="swiper-pagination"></div>
+
+              <!-- If we need navigation buttons -->
+              <div class="swiper-button-prev"></div>
+              <div class="swiper-button-next"></div>
+            </div>
+
+        </div>
+
+        <div class="gallery__descr">
+
+          <p class="gallery__descr-text">
+            Вам предоставляется 10&nbsp;бесплатных скачиваний. Для увеличения количества скачиваний <a href="#" class="gallery__descr-link links">авторизуйтесь,</a> либо воспользуйтесь лицензией.
+          </p>
+        </div>
+
+
+      </div>
+    </section>
+
   </main>
 
   <footer id="footer">
 
   </footer>
+
+
 
 </body>
 </html>

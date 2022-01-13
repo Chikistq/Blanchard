@@ -24,18 +24,18 @@
 
 
 .links:focus,
-.choices:focus {
+#header .choices:focus {
   background-color: $active-color;
 }
 
 .links:hover,
-.choices:hover {
+#header .choices:hover {
   color: $hover-color;
 }
 
 
 .links:active,
-.choices:active {
+#header .choices:active {
   color: $active-color;
   background-color: inherit;
  }
@@ -84,7 +84,25 @@
 }
 
 
+.gallery__slider-img:hover::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 85%;
+  height: 85%;
+  transform: translate(-50%, -50%);
+  background-size: 10px 10px, 100% 100%;
+  background: url("../img/hover-gl.svg") no-repeat 50% 50%, rgba(0, 0, 0, .5);
+}
 
+//.gallery__modal-exit:hover {
+//  background-color: rgba(#666, .5);
+//}
+//
+//.gallery__modal-exit:active {
+//  background-color: rgba(#666, .3);
+//}
 
 
 
