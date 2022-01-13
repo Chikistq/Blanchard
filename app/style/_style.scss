@@ -217,7 +217,7 @@
 }
 
 #header .swiper-wrapper {
-  animation: scale 8s linear 1s alternate-reverse infinite;
+  animation: scale 10s linear 1s alternate-reverse infinite;
 }
 @keyframes scale {
   0% {
@@ -280,7 +280,7 @@
 }
 
 .about-us {
-  padding-bottom: 70px;
+  padding: 83px 0 70px;
 }
 
 .about-us__title {
@@ -398,8 +398,8 @@
 }
 
 #gallery .choices[data-type*=select-one]:after {
-  border-left: 0px solid white;
-  border-top: 0px solid white;
+  border-left: 0 solid white;
+  border-top: 0 solid white;
 }
 
 #gallery .choices[data-type*=select-one].is-open:after {

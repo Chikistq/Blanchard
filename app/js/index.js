@@ -29,13 +29,12 @@ document.addEventListener('DOMContentLoaded', function() {
     autoplay: {
       delay: 8000,
     },
-    speed: 4000,
+    speed: 10000,
   });
 
 
   /* eslint-disable-next-line no-unused-vars */
   const swiperGallery = new Swiper('.swiper-gallery', {
-
     pagination: {
       el: ".swiper-pagination",
       type: "fraction",
@@ -92,41 +91,14 @@ document.addEventListener('DOMContentLoaded', function() {
     }
   });
 
-  /* header-selects */
-  /* eslint-disable-next-line no-unused-vars */
-  const choices1 = new Choices('#select1', {
-    searchEnabled: false,
-    itemSelectText: '',
-  })
-  /* eslint-disable-next-line no-unused-vars */
-  const choices2 = new Choices('#select2', {
-    searchEnabled: false,
-    itemSelectText: 'Импрессионизм',
-    placeholder: true,
-  })
-  /* eslint-disable-next-line no-unused-vars */
-  const choices3 = new Choices('#select3', {
-    searchEnabled: false,
-    itemSelectText: '',
-  })
-  /* eslint-disable-next-line no-unused-vars */
-  const choices4 = new Choices('#select4', {
-    searchEnabled: false,
-    itemSelectText: '',
-  })
-  /* eslint-disable-next-line no-unused-vars */
-  const choices5 = new Choices('#select5', {
-    searchEnabled: false,
-    itemSelectText: '',
-  })
-
+  /* gallery-selects */
   /* eslint-disable-next-line no-unused-vars */
   const choices6 = new Choices('.gallery__filter-select', {
     searchEnabled: false,
     itemSelectText: '',
   })
 
-
+  /* mobile-menu */
   document.querySelector('#burger').addEventListener('click', function(e) {
     e.currentTarget.classList.toggle('open')
     $('.header__nav-mobile').$el.classList.toggle('open')
@@ -135,6 +107,8 @@ document.addEventListener('DOMContentLoaded', function() {
         $('.header__nav-mobile-lists').$el.classList.toggle('open')
         ), 250)
   })
+  /* mobile-menu end */
+
 
 
   /* search active */
@@ -154,19 +128,12 @@ document.addEventListener('DOMContentLoaded', function() {
       })
     }, 400)
   })
+
   /* search active end */
-
-  /*  симпл-бар...ломает верстку, т.к. second-line у меня с position: absolute
-  * позже придумаю */
-  // document.querySelectorAll('.choices__list--dropdown').forEach(el => {
-  //   el.setAttribute('data-simplebar', '')
-  // })
-
 
 
 
   /* gallery-modal */
-
   document.querySelectorAll('.gallery__slider-img').forEach(el => {
     el.addEventListener('click', function(event) {
       const crtModal = $.modal(event)
@@ -189,29 +156,6 @@ document.addEventListener('DOMContentLoaded', function() {
       }
     })
   })
-
-  //
-  // document.addEventListener('click', function(e) {
-  //   const crtModal = $.modal(e)
-  //
-  //   if (e.target.closest('.gallery__slider-img')) {
-  //     crtModal.open()
-  //
-  //     const $modal = $('.gallery__modal')
-  //     const $exitBtn = $('.gallery__modal-exit')
-  //
-  //     $modal.on('click', function(e) {
-  //
-  //       if (e.target == $modal.$el || e.target == $exitBtn.$el || e.target == $exitBtn.$el.firstElementChild) {
-  //         crtModal.close()
-  //         setTimeout(() => {
-  //           crtModal.destroy()
-  //         }, 300)
-  //       }
-  //     })
-  //   }
-  // })
-
   /* gallery-modal end */
 
 
