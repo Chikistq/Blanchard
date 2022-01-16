@@ -19,7 +19,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
   /* header-slider */
   /* eslint-disable-next-line no-unused-vars */
-  const swiper = new Swiper('.header__slider_swiper', {
+  const swiper = new Swiper('.header__slider-swiper', {
     loop: true,
     effect: 'fade',
     fadeEffect: {
@@ -31,7 +31,6 @@ document.addEventListener('DOMContentLoaded', function() {
     },
     speed: 10000,
   });
-
 
   /* eslint-disable-next-line no-unused-vars */
   const swiperGallery = new Swiper('.swiper-gallery', {
@@ -91,6 +90,63 @@ document.addEventListener('DOMContentLoaded', function() {
     }
   });
 
+
+
+  /* dropdown { */
+  const params = {
+    btnClassName: "js-header-dropdown-btn",
+    dropClassName: "js-header-drop",
+    activeClassName: "is-active",
+    disabledClassName: "is-disabled"
+  }
+
+  function onDisable(evt) {
+    if (evt.target.classList.contains(params.disabledClassName)) {
+      evt.target.classList.remove(params.disabledClassName, params.activeClassName);
+      evt.target.removeEventListener("animationend", onDisable);
+    }
+  }
+
+  function setMenuListener() {
+    document.body.addEventListener("click", (evt) => {
+      const activeElements = document.querySelectorAll(`.${params.btnClassName}.${params.activeClassName}, .${params.dropClassName}.${params.activeClassName}`);
+
+      if (activeElements.length && !evt.target.closest(`.${params.activeClassName}`)) {
+        activeElements.forEach((current) => {
+          if (current.classList.contains(params.btnClassName)) {
+            current.classList.remove(params.activeClassName);
+          } else {
+            current.classList.add(params.disabledClassName);
+          }
+        });
+      }
+
+      if (evt.target.closest(`.${params.btnClassName}`)) {
+        const btn = evt.target.closest(`.${params.btnClassName}`);
+        const path = btn.dataset.path;
+        const drop = document.querySelector(`.${params.dropClassName}[data-target="${path}"]`);
+
+        btn.classList.toggle(params.activeClassName);
+
+        if (!drop.classList.contains(params.activeClassName)) {
+          drop.classList.add(params.activeClassName);
+          drop.addEventListener("animationend", onDisable);
+        } else {
+          drop.classList.add(params.disabledClassName);
+        }
+      }
+    });
+  }
+
+  setMenuListener();
+
+  /* } dropdown end */
+
+
+
+
+
+
   /* gallery-selects */
   /* eslint-disable-next-line no-unused-vars */
   const choices6 = new Choices('.gallery__filter-select', {
@@ -101,10 +157,10 @@ document.addEventListener('DOMContentLoaded', function() {
   /* mobile-menu */
   document.querySelector('#burger').addEventListener('click', function(e) {
     e.currentTarget.classList.toggle('open')
-    $('.header__nav-mobile').$el.classList.toggle('open')
+    $('.header__top-nav-mobile').$el.classList.toggle('open')
     setTimeout(
-        ($('.header__nav-mobile-button').$el.classList.toggle('open'),
-        $('.header__nav-mobile-lists').$el.classList.toggle('open')
+        ($('.nav-mobile__btn').$el.classList.toggle('open'),
+        $('.nav-mobile__lists').$el.classList.toggle('open')
         ), 250)
   })
   /* mobile-menu end */
@@ -112,22 +168,59 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
   /* search active */
-  const sBtn = document.querySelector('.header__search-link')
-  const sInput = document.querySelector('.search-form__input_mobile')
+  setSearch({
+    openBtnClass: "header__top-search-btn", // класс кнопки открытия
+    closeBtnClass: "search-form__close", // класс кнопки закрытия
+    searchClass: "header__top-search", // класс формы поиска
+    activeClass: "is-opened", // класс открытого состояния
+    hiddenClass: "is-closed" // класс закрывающегося состояния (удаляется сразу после закрытия)
+  });
 
-  $(sBtn).on('click', function(event) {
-    event.preventDefault()
-    $(event.currentTarget).addClass('display-none')
+  function setSearch(params) {
+    const openBtn = document.querySelector(`.${params.openBtnClass}`);
+    const search = document.querySelector(`.${params.searchClass}`);
+    const closeBtn = search.querySelector(`.${params.closeBtnClass}`);
 
-    setTimeout(function() {
-      document.addEventListener('click', function(e) {
-        console.log(e.target)
-        if (e.target !== sInput) {
-          $(sBtn).removeClass('display-none')
-        }
-      })
-    }, 400)
-  })
+    search.addEventListener("animationend", function(evt) {
+      if (this._isOpened) {
+        this.classList.remove(params.activeClass);
+        this.classList.remove(params.hiddenClass);
+        this._isOpened = false;
+      } else {
+        this._isOpened = true;
+      }
+    });
+
+    search.addEventListener('click', function(evt) {
+      evt._isSearch = true;
+    });
+
+    openBtn.addEventListener("click", function(evt) {
+      this.disabled = true;
+
+      if (
+        !search.classList.contains(params.activeClass) &&
+        !search.classList.contains(params.hiddenClass)
+      ) {
+        search.classList.add(params.activeClass);
+      }
+    });
+
+    closeBtn.addEventListener('click', function() {
+      openBtn.disabled = false;
+      search.classList.add(params.hiddenClass);
+    });
+
+    document.body.addEventListener('click', function(evt) {
+      if (!evt._isSearch && search._isOpened) {
+        openBtn.disabled = false;
+        search.classList.add(params.hiddenClass);
+      }
+    });
+  }
+
+
+
 
   /* search active end */
 

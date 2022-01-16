@@ -18,7 +18,8 @@
     "padded-blocks": "off",
     "no-multiple-empty-lines": "off",
     "max-len": "off",
-    "no-debugger": "off"
+    "no-debugger": "off",
+    "no-invalid-this": "off"
   },
   "extends": [
     "eslint:recommended",

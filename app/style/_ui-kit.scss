@@ -4,19 +4,21 @@
   padding: 6px;
   transition: color .3s ease-in-out, background-color 0.3s ease-in-out;
   z-index: 1;
+  font-size: 18px;
+  line-height: 25px;
 }
 
-
-.links:before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  width: calc(100% + 2px);
-  height: calc(100% + 2px);
-}
+//не помню для чего делал
+//.links:before {
+//  content: '';
+//  position: absolute;
+//  top: 0;
+//  left: 0;
+//  bottom: 0;
+//  right: 0;
+//  width: calc(100% + 2px);
+//  height: calc(100% + 2px);
+//}
 
 .links path {
   transition: fill .3s ease-in-out;
@@ -74,13 +76,13 @@
 
 .header__button:hover {
   outline: 3px solid #D1A9F0;
-  outline-offset: 0px;
+  outline-offset: 0;
 }
 
 .header__button:active {
   outline: 3px solid #D1A9F0;
   background-color: $active-color;
-  outline-offset: 0px;
+  outline-offset: 0;
 }
 
 

@@ -4,7 +4,9 @@
 @import "style";  //основные стили здесь!
 @import "m-menu";
 @import "ui-kit";
-@import "select-bg";
+@import "dropdown";
+@import "dropdown-bg";
+@import "search";
 @import "modal";
 
 
@@ -26,6 +28,15 @@ a {
   outline: none;
 }
 
+ul {
+  margin: 0;
+  padding-left: 0;
+}
+
+li {
+  list-style: none;
+}
+
 img {
   max-width: 100%;
 }
@@ -45,9 +56,9 @@ body {
 .container {
   position: relative;
   margin: 0 auto;
-  padding-left: 160px;
-  padding-right: 160px;
-  max-width: 1920px;
+  padding-left: 50px;
+  padding-right: 50px;
+  max-width: 1700px;
 }
 
 .flex {
@@ -74,11 +85,11 @@ body {
   font-weight: 700;
   outline: none;
   border: none;
-  letter-spacing: 1.4px;
+  letter-spacing: 1.1px;
   white-space: nowrap;
 }
 
-.header__nav-mobile-button {
+.nav-mobile__btn {
   padding: 15px 86px;
   font-weight: 600;
   font-size: 18px;
@@ -90,43 +101,7 @@ body {
   transition: opacity .5s ease-in-out, transform .6s ease-in-out;
 }
 
-.header__nav-mobile-button.open {
+.nav-mobile__btn.open {
   transform: translateY(0px);
   opacity: 1;
 }
-
-.mb83 {
-  margin-bottom: 83px;
-}
-
-.visible-hidden {
-  opacity: 0;
-  position: absolute;
-  top: 0;
-}
-
-.display-none {
-  opacity: 0;
-  visibility: hidden;
-  pointer-events: none;
-}
-
-.header__search-form_mobile {
-  position: absolute;
-  right: 49px;
-  top: 35px;
-  opacity: 0;
-  transition: transform .4s ease-in-out, opacity .4s ease-in-out;
-  background-color: #18171B;
-  transform: translateX(40px);
-  z-index: -1;
-}
-
-.search-form__close {
-  display: none;
-}
-
-//
-//* {
-//  outline: 1px solid red;
-//}

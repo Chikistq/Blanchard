@@ -13,34 +13,34 @@
 </head>
 <body>
 
-<header class="color-invert" id="header">
+<header class="header color-invert" id="header">
 
-  <nav class="header__nav-mobile">
-    <ul class="header__nav-mobile-lists nav-mobile_active">
-      <li class="header__nav-mobile-list">
-        <a class="header__link links" href="#">О нас</a>
+  <nav class="header__top-nav-mobile nav-mobile">
+    <ul class="nav-mobile__lists">
+      <li class="nav-mobile__list">
+        <a class="nav-mobile__link links" href="#">О нас</a>
       </li>
-      <li class="header__nav-mobile-list">
-        <a class="header__link links" href="#">Галерея</a>
+      <li class="nav-mobile__list">
+        <a class="nav-mobile__link links" href="#">Галерея</a>
       </li>
-      <li class="header__nav-mobile-list">
-        <a class="header__link links" href="#">Каталог</a>
+      <li class="nav-mobile__list">
+        <a class="nav-mobile__link links" href="#">Каталог</a>
       </li>
-      <li class="header__nav-mobile-list">
-        <a class="header__link links" href="#">События</a>
+      <li class="nav-mobile__list">
+        <a class="nav-mobile__link links" href="#">События</a>
       </li>
-      <li class="header__nav-mobile-list">
-        <a class="header__link links" href="#">Издания</a>
+      <li class="nav-mobile__list">
+        <a class="nav-mobile__link links" href="#">Издания</a>
       </li>
-      <li class="header__nav-mobile-list">
-        <a class="header__link links" href="#">Проекты</a>
+      <li class="nav-mobile__list">
+        <a class="nav-mobile__link links" href="#">Проекты</a>
       </li>
-      <li class="header__nav-mobile-list">
-        <a class="header__link links" href="#">Контакты</a>
+      <li class="nav-mobile__list">
+        <a class="nav-mobile__link links" href="#">Контакты</a>
       </li>
     </ul>
 
-    <button class="btn header__nav-mobile-button">
+    <button class="nav-mobile__btn btn">
       <svg width="13" height="13" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path d="M5.12056 9.09278L6.13889 10.1111L9.75 6.5L6.13889 2.88889L5.12056 3.90722L6.98389 5.77778H0V7.22222H6.98389L5.12056 9.09278ZM11.5556 0H1.44444C0.642778 0 0 0.65 0 1.44444V4.33333H1.44444V1.44444H11.5556V11.5556H1.44444V8.66667H0V11.5556C0 12.35 0.642778 13 1.44444 13H11.5556C12.35 13 13 12.35 13 11.5556V1.44444C13 0.65 12.35 0 11.5556 0Z" fill="white"></path>
       </svg>
@@ -49,21 +49,21 @@
     </button>
   </nav>
 
-  <div class="header__top-line">
+  <div class="header__top">
     <div class="container">
-      <div class="header__top-line_pos flex">
+      <div class="header__top-wrap flex">
 
-        <div class="header-top__burger" id="burger">
+        <div class="header__top-burger" id="burger">
           <span></span>
           <span></span>
           <span></span>
         </div>
 
-        <a class="header__logo-link" href="/">
+        <a class="header__top-logo" href="/">
           <img class="header__logo-img" src="img/logo.svg" alt="Blanchard — художественная галерея">
         </a>
 
-        <nav class="header__nav">
+        <nav class="header__top-nav flex">
           <ul class="header__lists flex">
             <li class="header__list">
               <a class="header__link links" href="#">
@@ -97,39 +97,40 @@
             </li>
             <li class="header__list">
               <a class="header__link links" href="#">
-                Константы
+                Контакты
               </a>
             </li>
           </ul>
+
+
+          <a class="header__login links" href="#">
+            <svg width="13" height="13" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M5.12056 9.09278L6.13889 10.1111L9.75 6.5L6.13889 2.88889L5.12056 3.90722L6.98389 5.77778H0V7.22222H6.98389L5.12056 9.09278ZM11.5556 0H1.44444C0.642778 0 0 0.65 0 1.44444V4.33333H1.44444V1.44444H11.5556V11.5556H1.44444V8.66667H0V11.5556C0 12.35 0.642778 13 1.44444 13H11.5556C12.35 13 13 12.35 13 11.5556V1.44444C13 0.65 12.35 0 11.5556 0Z" fill="white"></path>
+            </svg>
+
+            Войти
+          </a>
         </nav>
 
-        <a class="header__link login-link links" href="#">
-          <svg width="13" height="13" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M5.12056 9.09278L6.13889 10.1111L9.75 6.5L6.13889 2.88889L5.12056 3.90722L6.98389 5.77778H0V7.22222H6.98389L5.12056 9.09278ZM11.5556 0H1.44444C0.642778 0 0 0.65 0 1.44444V4.33333H1.44444V1.44444H11.5556V11.5556H1.44444V8.66667H0V11.5556C0 12.35 0.642778 13 1.44444 13H11.5556C12.35 13 13 12.35 13 11.5556V1.44444C13 0.65 12.35 0 11.5556 0Z" fill="white"></path>
-          </svg>
-
-          Войти
-        </a>
-
-        <!--        поиск, раскрытие с 1024px -->
-        <a class="header__search-link" href="#">
-          <svg class="search-form__icon" width="30" height="29" viewBox="0 0 30 29" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <!--        поиск, раскрытие с 1024px  -->
+        <a class="header__top-search-btn" href="#">
+          <svg class="header__top-search-icon search-icon" width="30" height="29" viewBox="0 0 30 29" fill="none" xmlns="http://www.w3.org/2000/svg">
             <rect width="9.15446" height="2.28862" transform="matrix(-0.718931 0.695081 0.718931 0.695081 6.58154 21.0461)" fill="white"></rect>
             <path fill-rule="evenodd" clip-rule="evenodd" d="M16.1246 24.174C10.0376 24.174 5.32763 19.2726 5.32763 13.5104C5.32763 7.74823 10.0376 2.84676 16.1246 2.84676C22.2115 2.84676 26.9215 7.74823 26.9215 13.5104C26.9215 19.2726 22.2115 24.174 16.1246 24.174ZM16.1246 26.8399C8.76285 26.8399 2.79502 20.8721 2.79502 13.5104C2.79502 6.14869 8.76285 0.180847 16.1246 0.180847C23.4863 0.180847 29.4541 6.14869 29.4541 13.5104C29.4541 20.8721 23.4863 26.8399 16.1246 26.8399Z" fill="white"></path>
           </svg>
         </a>
 
-        <form class="header__search-form_mobile flex" name="search" method="get">
+        <form class="header__top-search search-form" name="search" method="get">
 
           <button class="search-form__button" aria-label="найти" type="submit">
-            <svg class="search-form__icon" width="30" height="29" viewBox="0 0 30 29" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <svg class="search-form__icon search-icon" width="30" height="29" viewBox="0 0 30 29" fill="none" xmlns="http://www.w3.org/2000/svg">
               <rect width="9.15446" height="2.28862" transform="matrix(-0.718931 0.695081 0.718931 0.695081 6.58154 21.0461)" fill="white"></rect>
               <path fill-rule="evenodd" clip-rule="evenodd" d="M16.1246 24.174C10.0376 24.174 5.32763 19.2726 5.32763 13.5104C5.32763 7.74823 10.0376 2.84676 16.1246 2.84676C22.2115 2.84676 26.9215 7.74823 26.9215 13.5104C26.9215 19.2726 22.2115 24.174 16.1246 24.174ZM16.1246 26.8399C8.76285 26.8399 2.79502 20.8721 2.79502 13.5104C2.79502 6.14869 8.76285 0.180847 16.1246 0.180847C23.4863 0.180847 29.4541 6.14869 29.4541 13.5104C29.4541 20.8721 23.4863 26.8399 16.1246 26.8399Z" fill="white"></path>
             </svg>
           </button>
 
           <label for="f-search">
-            <span class="visible-hidden">Поиск по сайту</span>
+            <span class="search-form__inputName visually-hidden">Поиск по сайту</span>
             <input class="search-form__input search-form__input_mobile" id="f-search" tabindex="0" type="text" placeholder name="search" value>
           </label>
 
@@ -145,68 +146,118 @@
 
       </div>
     </div>
-
-
-
   </div>
 
-  <div class="header__second-line">
-    <div class="header__second-line_pos container flex">
+  <div class="header__down">
+    <div class="header__down-wrap container flex">
+      <ul class="header__down-dropdown dropdown flex">
 
-      <div class="header__second-line_selects flex">
-        <select class="header__select" id="select1" name="select">
-          <option value="Тинторетто">Тинторетто</option>
-          <option value="Фридрих">Фридрих</option>
-          <option value="Леонардо">Леонардо</option>
-          <option value="Верроккьо">Верроккьо</option>
-          <option selected disabled hidden>Реализм</option>
+        <li class="dropdown__item">
+          <button class="dropdown__item-btn js-header-dropdown-btn" data-path="one">
+            Реализм
+            <span class="dropdown__item-icon"></span>
+          </button>
+          <div class="dropdown__drop js-header-drop" data-target="one">
+            <div class="dropdown__drop-wrap" data-simplebar>
+              <ul class="dropdown__drop-list">
+                <li class="dropdown__drop-item ">
+                  <a href="" class="dropdown__item-link drop1-bg-1 dropdown__item-tintoretto">
+                    <span class="dropdown__item-text">Тинторрето</span>
+                  </a>
+                </li>
+                <li class="dropdown__drop-item "><a href="" class="dropdown__item-link drop1-bg-2 dropdown__item-fridrih">Фридрих</a></li>
+                <li class="dropdown__drop-item "><a href="" class="dropdown__item-link drop1-bg-3 dropdown__item-leo">Леонардо</a></li>
+                <li class="dropdown__drop-item "><a href="" class="dropdown__item-link drop1-bg-4 dropdown__item-tintoretto">Верроккьо</a></li>
+                <li class="dropdown__drop-item "><a href="" class="dropdown__item-link drop1-bg-1 dropdown__item-tintoretto">Тинторрето</a></li>
+                <li class="dropdown__drop-item "><a href="" class="dropdown__item-link drop1-bg-1 dropdown__item-tintoretto">Тинторрето</a></li>
+              </ul>
+            </div>
+          </div>
+        </li>
 
-        </select>
+        <li class="dropdown__item">
+          <button class="dropdown__item-btn js-header-dropdown-btn" data-path="two">
+            Импрессионизм
+            <span class="dropdown__item-icon"></span>
+          </button>
+          <div class="dropdown__drop js-header-drop" data-target="two">
+            <div class="dropdown__drop-wrap" data-simplebar>
+              <ul class="dropdown__drop-list">
+                <li class="dropdown__drop-item "><a href="" class="dropdown__item-link drop2-bg-1">Моне</a></li>
+                <li class="dropdown__drop-item "><a href="" class="dropdown__item-link drop2-bg-2">Сислей</a></li>
+                <li class="dropdown__drop-item "><a href="" class="dropdown__item-link drop2-bg-3">Мане</a></li>
+                <li class="dropdown__drop-item "><a href="" class="dropdown__item-link drop2-bg-4">Ренуар</a></li>
+              </ul>
+            </div>
+          </div>
+        </li>
 
-        <select class="header__select" id="select2" name="select">
-          <option value="Моне">Моне</option>
-          <option value="Сислей">Сислей</option>
-          <option value="Мане">Мане</option>
-          <option value="Ренуар">Ренуар</option>
-          <option selected disabled value>Импрессионизм</option>
-        </select>
+        <li class="dropdown__item">
+          <button class="dropdown__item-btn js-header-dropdown-btn" data-path="tree">
+            Постимпрессионизм
+            <span class="dropdown__item-icon"></span>
+          </button>
+          <div class="dropdown__drop js-header-drop" data-target="tree">
+            <div class="dropdown__drop-wrap" data-simplebar>
+              <ul class="dropdown__drop-list">
+                <li class="dropdown__drop-item "><a href="" class="dropdown__item-link drop1-bg-1">Ван Гог</a></li>
+                <li class="dropdown__drop-item "><a href="" class="dropdown__item-link drop3-bg-2">Сезанн</a></li>
+                <li class="dropdown__drop-item "><a href="" class="dropdown__item-link drop3-bg-3">Гоген</a></li>
+                <li class="dropdown__drop-item "><a href="" class="dropdown__item-link drop3-bg-4">Сёра</a></li>
+              </ul>
+            </div>
+          </div>
+        </li>
 
-        <select class="header__select" id="select3" name="select">
-          <option value="Сезанн">Сезанн</option>
-          <option value="Гоген">Гоген</option>
-          <option value="Сёра">Сёра</option>
-          <option value="Ван Гог">Ван Гог</option>
-          <option selected disabled hidden>Постимпрессионизм</option>
-        </select>
+        <li class="dropdown__item">
+          <button class="dropdown__item-btn js-header-dropdown-btn" data-path="for">
+            Авангард
+            <span class="dropdown__item-icon"></span>
+          </button>
+          <div class="dropdown__drop js-header-drop" data-target="for">
+            <div class="dropdown__drop-wrap" data-simplebar>
+              <ul class="dropdown__drop-list">
+                <li class="dropdown__drop-item "><a href="" class="dropdown__item-link drop4-bg-1">Кандинский</a></li>
+                <li class="dropdown__drop-item "><a href="" class="dropdown__item-link drop4-bg-2">Маринетти</a></li>
+                <li class="dropdown__drop-item "><a href="" class="dropdown__item-link drop4-bg-3">Малевич</a></li>
+                <li class="dropdown__drop-item "><a href="" class="dropdown__item-link drop4-bg-4">Пикассо</a></li>
+              </ul>
+            </div>
+          </div>
+        </li>
 
-        <select class="header__select" id="select4" name="select">
-          <option value="Кандинский">Кандинский</option>
-          <option value="Малевич">Малевич</option>
-          <option value="Маринетти">Маринетти</option>
-          <option value="Пикассо">Пикассо</option>
-          <option selected disabled hidden>Авангард</option>
-        </select>
+        <li class="dropdown__item">
+          <button class="dropdown__item-btn js-header-dropdown-btn" data-path="five">
+            Футуризм
+            <span class="dropdown__item-icon"></span>
+          </button>
+          <div class="dropdown__drop js-header-drop" data-target="five">
+            <div class="dropdown__drop-wrap" data-simplebar>
+              <ul class="dropdown__drop-list">
+                <li class="dropdown__drop-item "><a href="" class="dropdown__item-link drop5-bg-1">Карра</a></li>
+                <li class="dropdown__drop-item "><a href="" class="dropdown__item-link drop5-bg-2">Прателла</a></li>
+                <li class="dropdown__drop-item "><a href="" class="dropdown__item-link drop5-bg-3">Северини</a></li>
+                <li class="dropdown__drop-item "><a href="" class="dropdown__item-link drop5-bg-4">Балла</a></li>
+              </ul>
+            </div>
+          </div>
+        </li>
 
-        <select class="header__select" id="select5" name="select">
-          <option value="Карра">Карра</option>
-          <option value="Прателла">Прателла</option>
-          <option value="Северини">Северини</option>
-          <option value="Балла">Балла</option>
-          <option selected disabled hidden>Футуризм</option>
-        </select>
-      </div>
+      </ul>
 
-      <form class="header__search-form flex" name="search" method="get">
+
+
+      <form class="header__down-search search-form flex" name="search" method="get">
 
         <button class="search-form__button" aria-label="найти" type="submit">
-          <svg class="search-form__search" width="23" height="22" viewBox="0 0 23 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <svg class="header__top-search-icon" width="23" height="22" viewBox="0 0 23 22" fill="none" xmlns="http://www.w3.org/2000/svg">
             <rect width="6.8678" height="1.71695" transform="matrix(-0.718931 0.695081 0.718931 0.695081 4.9375 15.6534)" fill="white"></rect>
             <path fill-rule="evenodd" clip-rule="evenodd" d="M12.0969 18C7.53041 18 3.99692 14.3229 3.99692 10C3.99692 5.67715 7.53041 2 12.0969 2C16.6634 2 20.1969 5.67715 20.1969 10C20.1969 14.3229 16.6634 18 12.0969 18ZM12.0969 20C6.57408 20 2.09692 15.5228 2.09692 10C2.09692 4.47715 6.57408 0 12.0969 0C17.6198 0 22.0969 4.47715 22.0969 10C22.0969 15.5228 17.6198 20 12.0969 20Z" fill="white"></path>
           </svg>
         </button>
 
         <label for="form-search">
-          <span class="visible-hidden">Поиск по сайту</span>
+          <span class="search-form__inputName visually-hidden">Поиск по сайту</span>
           <input class="search-form__input" id="form-search" tabindex="0" type="text" placeholder="Поиск по сайту" name="search" value>
         </label>
 
@@ -220,7 +271,7 @@
   </div>
 
   <div class="header__slider">
-    <div class="header__slider_swiper swiper">
+    <div class="header__slider-swiper swiper">
       <div class="swiper-wrapper">
         <!-- Slides -->
         <div class="swiper-slide slide-img header-slide-1"></div>
@@ -237,7 +288,7 @@
         Мы&nbsp;вынуждены отталкиваться от&nbsp;того, что реализация намеченных плановых заданий создаёт предпосылки для новых предложений.
       </p>
 
-      <button class="btn header__button" aria-label="Подписаться на рассылку">
+      <button class="header__button btn" aria-label="Подписаться на рассылку">
         Подписаться на рассылку
       </button>
     </div>
@@ -247,8 +298,8 @@
 
 </header>
 
-<main id="main">
-  <section class="about-us container" id="about-us">
+<main class="main" id="main">
+  <section class="main__about-us about-us container" id="about-us">
     <h2 class="about-us__title section-title">
       О нас
     </h2>
@@ -257,9 +308,9 @@
     </p>
   </section>
 
-  <section class="gallery color-invert" id="gallery">
+  <section class="main__gallery gallery color-invert" id="gallery">
 
-    <div class="container flex gallery-wrap">
+    <div class="gallery-wrap container flex">
 
 
 
@@ -283,7 +334,7 @@
 
       <div class="gallery__slider">
 
-        <div class=" swiper swiper-gallery">
+        <div class="swiper-gallery swiper">
           <!-- Additional required wrapper -->
           <div class="swiper-wrapper">
             <!-- Slides -->
@@ -470,7 +521,7 @@
       <div class="gallery__descr">
 
         <p class="gallery__descr-text">
-          Вам предоставляется 10&nbsp;бесплатных скачиваний. Для увеличения количества скачиваний <a class="gallery__descr-link links" href="#">авторизуйтесь,</a> либо воспользуйтесь лицензией.
+          Вам предоставляется 10&nbsp;бесплатных скачиваний. Для увеличения количества скачиваний<a class="gallery__descr-link links" href="#">авторизуйтесь,</a>либо воспользуйтесь лицензией.
         </p>
       </div>
 
@@ -480,7 +531,7 @@
 
 </main>
 
-<footer id="footer">
+<footer class="footer" id="footer">
 
 </footer>
 
