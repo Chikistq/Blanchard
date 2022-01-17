@@ -23,7 +23,7 @@ With NPM: </br>
  </br>
  </br>
 With Yarn: </br>
-`yarn add choices.js`
+`yarn add`
 
 # Краткое описание
 Верстка выполнена на HTML5/SCSS5, JS EC6, SCSS, webpac, babel, eslint, без использования CSS–фреймворков таких как bootstrap и пр., полностью семантически грамотная, кроссбраузерная, адаптивная/резиновая pixel perfect.  </br>
