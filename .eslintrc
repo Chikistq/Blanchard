@@ -5,7 +5,7 @@
     "node": true,
     "browser": true
   },
-  "ignorePatterns": ["choices.js", "simplebar.css", "simplebar.min.js"],
+  "ignorePatterns": ["choices.js", "simplebar.css", "simplebar.min.js", "jquery.js", "jquery-ui.min.js", "inputmask.min.js", "just-validate.min.js", "ymaps.js"],
   "rules": {
     "semi": "off",
     "linebreak-style": "off",
@@ -19,7 +19,7 @@
     "no-multiple-empty-lines": "off",
     "max-len": "off",
     "no-debugger": "off",
-    "no-invalid-this": "off"
+    "no-invalid-this": "off",
   },
   "extends": [
     "eslint:recommended",

@@ -25,11 +25,11 @@ class Dom {
 
 }
 
-export function $(selector) {
+export function $Dom(selector) {
   return new Dom(selector)
 }
 
-$.modal = function(eTarget) {
+$Dom.modal = function(eTarget) {
 
 
 

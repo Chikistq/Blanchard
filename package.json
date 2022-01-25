@@ -44,7 +44,11 @@
   "dependencies": {
     "@babel/polyfill": "^7.12.1",
     "element-closest": "^3.0.2",
+    "jquery": "^3.6.0",
+    "just-validate": "^3.3.1",
     "simplebar": "^5.3.6",
-    "swiper": "^7.4.1"
+    "swiper": "^7.4.1",
+    "tippy.js": "^6.3.7",
+    "webpack-jquery-ui": "^2.0.1"
   }
 }

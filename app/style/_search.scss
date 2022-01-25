@@ -1,23 +1,8 @@
-
-.visually-hidden {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  margin: -1px;
-  border: 0;
-  padding: 0;
-  clip: rect(0, 0, 0, 0);
-  overflow: hidden;
-}
-
 .header__top-search-btn {
   position: relative;
   display: none;
   width: 28px;
 }
-
-
-
 
 .search-form__input,
 .search-form__button {
@@ -70,8 +55,6 @@
   transform-origin: right;
 }
 
-
-
 @keyframes search-open {
   from {
     transform: translateY(-50%) scaleX(0);
@@ -93,4 +76,3 @@
     opacity: 0;
   }
 }
-

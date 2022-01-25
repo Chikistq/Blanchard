@@ -1,16 +1,26 @@
 import '@/index.html'
-import '@/style/main.scss'
-import '@/style/media.scss'
-
 
 import '@/js/simplebar.min';
-import '@/style/simplebar.css'
+import '@/style/simplebar.css';
+
+import $ from 'jquery';
+require('webpack-jquery-ui');
 
 import Swiper from 'swiper/bundle';
 import 'swiper/css/bundle';
 
 import Choices from 'choices.js'
-import {$} from './Dom'
+import {$Dom} from './Dom'
+
+import tippy from 'tippy.js'
+import 'tippy.js/dist/tippy.css'
+
+import Inputmask from "./inputmask.min";
+/* eslint-disable-next-line no-unused-vars */
+import JustValidate from 'just-validate';
+
+import '@/style/main.scss'
+import '@/style/media.scss'
 
 /* eslint-disable-next-line no-unused-vars */
 const elementClosest = require('element-closest');
@@ -38,10 +48,10 @@ document.addEventListener('DOMContentLoaded', function() {
       el: ".swiper-pagination",
       type: "fraction",
     },
-    mousewheel: false,
+    // mousewheel: false,
     navigation: {
-      nextEl: ".swiper-button-next",
-      prevEl: ".swiper-button-prev",
+      nextEl: ".swiper-button-nextG",
+      prevEl: ".swiper-button-prevG",
     },
     autoplay: {
       delay: 9000,
@@ -89,6 +99,78 @@ document.addEventListener('DOMContentLoaded', function() {
       }
     }
   });
+
+  /* eslint-disable-next-line no-unused-vars */
+  const swiperEvents = new Swiper('.events__slider-wrap', {
+    // mousewheel: true,
+    pagination: {
+      el: '.events__pagination',
+      type: 'bullets',
+      clickable: true,
+    },
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+    autoHeight: true,
+    // autoplay: {
+    //   delay: 9000,
+    // },
+    breakpoints: {
+      320: {
+        slidesPerView: 1,
+        slidesPerGroup: 1,
+      },
+      576: {
+        slidesPerView: 2,
+        spaceBetween: 35.5,
+        slidesPerGroup: 2,
+      },
+      992: {
+        slidesPerView: 3,
+        spaceBetween: 28,
+        slidesPerGroup: 2,
+      },
+      1440: {
+        slidesPerView: 3,
+        spaceBetween: 49.5,
+      },
+
+    }
+  });
+
+  /* eslint-disable-next-line no-unused-vars */
+  const swiperProjects = new Swiper('.projects__slider', {
+    // mousewheel: true,
+    pagination: false,
+    navigation: {
+      nextEl: ".projects__btn-next",
+      prevEl: ".projects__btn-prev",
+    },
+    // autoplay: {
+    //   delay: 9000,
+    // },
+    breakpoints: {
+      320: {
+        slidesPerView: 1,
+        spaceBetween: 20,
+      },
+      576: {
+        slidesPerView: 2,
+        spaceBetween: 34,
+      },
+      992: {
+        slidesPerView: 2,
+        spaceBetween: 50,
+      },
+      1440: {
+        slidesPerView: 3,
+        spaceBetween: 50,
+      },
+    }
+  });
+
+
 
 
 
@@ -139,7 +221,6 @@ document.addEventListener('DOMContentLoaded', function() {
   }
 
   setMenuListener();
-
   /* } dropdown end */
 
 
@@ -153,14 +234,15 @@ document.addEventListener('DOMContentLoaded', function() {
     searchEnabled: false,
     itemSelectText: '',
   })
+  /* gallery-selects end*/
 
   /* mobile-menu */
   document.querySelector('#burger').addEventListener('click', function(e) {
     e.currentTarget.classList.toggle('open')
-    $('.header__top-nav-mobile').$el.classList.toggle('open')
+    $Dom('.header__top-nav-mobile').$el.classList.toggle('open')
     setTimeout(
-        ($('.nav-mobile__btn').$el.classList.toggle('open'),
-        $('.nav-mobile__lists').$el.classList.toggle('open')
+        ($Dom('.nav-mobile__btn').$el.classList.toggle('open'),
+        $Dom('.nav-mobile__lists').$el.classList.toggle('open')
         ), 250)
   })
   /* mobile-menu end */
@@ -218,10 +300,6 @@ document.addEventListener('DOMContentLoaded', function() {
       }
     });
   }
-
-
-
-
   /* search active end */
 
 
@@ -229,13 +307,13 @@ document.addEventListener('DOMContentLoaded', function() {
   /* gallery-modal */
   document.querySelectorAll('.gallery__slider-img').forEach(el => {
     el.addEventListener('click', function(event) {
-      const crtModal = $.modal(event)
+      const crtModal = $Dom.modal(event)
 
       if (event.target.closest('.gallery__slider-img')) {
         crtModal.open()
 
-        const $modal = $('.gallery__modal')
-        const $exitBtn = $('.gallery__modal-exit')
+        const $modal = $Dom('.gallery__modal')
+        const $exitBtn = $Dom('.gallery__modal-exit')
 
         $modal.on('click', function(e) {
 
@@ -253,8 +331,146 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 
+  /* catalog */
+  $('#accordion').accordion({
+    collapsible: true,
+    active: false,
+    icons: false,
+    heightStyle: "content",
+
+  })
+  /* catalog end */
+
+
+
+
+  /* scroll*/
+  const smoothLinks = document.querySelectorAll('a[href^="#"]')
+  for (const smoothLink of smoothLinks) {
+    smoothLink.addEventListener('click', function(e) {
+      e.preventDefault();
+      const id = smoothLink.getAttribute('href')
+
+      document.querySelector(id).scrollIntoView({
+        behavior: 'smooth',
+        block: 'start'
+      })
+    })
+  }
+
+  tippy('#tooltip1', {
+    content: 'Пример современных тенденций - современная методология разработки',
+  });
+
+  tippy('#tooltip2', {
+    content: 'Приятно, граждане, наблюдать, как сделанные на базе аналитики выводы вызывают у вас эмоции',
+  });
+
+  tippy('#tooltip3', {
+    content: 'В стремлении повысить качество',
+  });
+
+
+  /* validate form */
+  const selector = document.querySelector('.contacts__top-form-input_tel');
+  const im = new Inputmask("+7 (999)999 99 99");
+  im.mask(selector);
+
+  // new JustValidate('.contacts__top-form', {
+  //   rules: {
+  //     name: {
+  //       required: true,
+  //       minLength: 3,
+  //       maxLength: 30
+  //     },
+  //     phone: {
+  //       required: true,
+  //       function: (name, value) => {
+  //         const phone = selector.inputmask.unmaskedvalue()
+  //         return Number(phone) && phone.length === 10
+  //       }
+  //     },
+  //   },
+  //   messages: {
+  //     name: {
+  //       required: "Введите Ваше имя?"
+  //     },
+  //     phone: {
+  //       required: "Введите Ваш телефон?"
+  //     },
+  //   },
+  //   submitHandler: function(form, values, ajax) {
+  //
+  //     ajax({
+  //       url: 'https://jsonplaceholder.typicode.com/posts',
+  //       method: 'POST',
+  //       data: values,
+  //       async: true,
+  //       callback: function(response) {
+  //         console.log(response)
+  //       }
+  //     });
+  //   },
+  //
+  // })
+
+  const validation = new JustValidate('.contacts__top-form', {
+    tooltip: {
+      position: 'top',
+    },
+  });
+
+  validation
+      .addField('#contact-name', [
+        {
+          rule: 'minLength',
+          value: 3,
+          errorMessage: 'Имя слишком короткое',
+        },
+        {
+          rule: 'customRegexp',
+          value: /^[a-zа-яё\s]+$/iu,
+          errorMessage: 'Недопустимый формат',
+        },
+        {
+          rule: 'maxLength',
+          value: 30,
+        },
+        {
+          rule: 'required',
+          errorMessage: 'Введите Ваше имя',
+        },
+      ])
+      .addField('#contact-phone', [
+        {
+          validator: (name, val) => {
+            const phone = selector.inputmask.unmaskedvalue()
+            return Number(phone) && phone.length === 10
+          },
+          errorMessage: `Введите Ваш телефон`,
+        },
+      ]);
+
+  // E-mail Ajax Send
+  $(".contacts__top-form").submit(function() {
+    const th = $(this);
+    $.ajax({
+      type: "POST",
+      url: "../php/mail.php",
+      data: th.serialize()
+    }).done(function() {
+      console.log('отправлено')
+      setTimeout(function() {
+        th.trigger("reset");
+      }, 1000);
+    });
+    return false;
+  });
+
+  /* validate form end */
 
 
 
 })
+
 

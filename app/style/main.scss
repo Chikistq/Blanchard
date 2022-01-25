@@ -1,14 +1,12 @@
 @import "vars";
-@import "fonts";
 @import "normalize.css";
-@import "style";  //основные стили здесь!
 @import "m-menu";
 @import "ui-kit";
 @import "dropdown";
 @import "dropdown-bg";
 @import "search";
 @import "modal";
-
+@import "style";  //основные стили здесь!
 
 html {
   -webkit-box-sizing: border-box;
@@ -35,6 +33,11 @@ ul {
 
 li {
   list-style: none;
+}
+
+p {
+  margin: 0;
+  padding: 0;
 }
 
 img {
@@ -69,39 +72,13 @@ body {
   color: #fff;
 }
 
-.section-title {
-  font-size: 48px;
-  line-height: 65px;
-  font-weight: 400;
-}
-
-.btn {
-  position: relative;
-  padding: 27px 37px;
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  clip: rect(0, 0, 0, 0);
   overflow: hidden;
-  background-color: #9d5cd0;
-  border-radius: 100px;
-  color: #fff;
-  font-weight: 700;
-  outline: none;
-  border: none;
-  letter-spacing: 1.1px;
-  white-space: nowrap;
-}
-
-.nav-mobile__btn {
-  padding: 15px 86px;
-  font-weight: 600;
-  font-size: 18px;
-  line-height: 25px;
-  background-color: inherit;
-  border: 2px solid $accent-color;
-  transform: translateY(60px);
-  opacity: 0;
-  transition: opacity .5s ease-in-out, transform .6s ease-in-out;
-}
-
-.nav-mobile__btn.open {
-  transform: translateY(0px);
-  opacity: 1;
 }
