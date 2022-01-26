@@ -16,8 +16,15 @@ import tippy from 'tippy.js'
 import 'tippy.js/dist/tippy.css'
 
 import Inputmask from "./inputmask.min";
+
+
 /* eslint-disable-next-line no-unused-vars */
-import JustValidate from 'just-validate';
+// import JustValidate from 'just-validate';
+
+// импорт для использования 1-ой версии плагина
+import '@/js/just-validate.min'
+
+
 
 import '@/style/main.scss'
 import '@/style/media.scss'
@@ -372,120 +379,127 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
   /* validate form */
-  const selector = document.querySelector('.contacts__top-form-input_tel');
+  const telMask = document.querySelector('.contacts__top-form-input_tel');
   const im = new Inputmask("+7 (999)999 99 99");
-  im.mask(selector);
+  im.mask(telMask);
 
-  // new JustValidate('.contacts__top-form', {
-  //   rules: {
-  //     name: {
-  //       required: true,
-  //       minLength: 3,
-  //       maxLength: 30
-  //     },
-  //     phone: {
-  //       required: true,
-  //       function: (name, value) => {
-  //         const phone = selector.inputmask.unmaskedvalue()
-  //         return Number(phone) && phone.length === 10
-  //       }
-  //     },
-  //   },
-  //   messages: {
-  //     name: {
-  //       required: "Введите Ваше имя?"
-  //     },
-  //     phone: {
-  //       required: "Введите Ваш телефон?"
-  //     },
-  //   },
-  //   submitHandler: function(form, values, ajax) {
-  //
-  //     ajax({
-  //       url: 'https://jsonplaceholder.typicode.com/posts',
-  //       method: 'POST',
-  //       data: values,
-  //       async: true,
-  //       callback: function(response) {
-  //         console.log(response)
-  //       }
-  //     });
-  //   },
-  //
-  // })
 
-  const validation = new JustValidate('.contacts__top-form', {
+  /* пример из видео максима. валидация работает, но форма улетает пустая.
+  * к тому же сбивается верстка тултипов
+  * чтобы метод работал необходимо раскоментировать подключение локального файла с плагином, а импорт из Node Mod... в комент*/
+  new window.JustValidate('.contacts__top-form', {
     tooltip: {
       position: 'top',
     },
-  });
+    rules: {
+      name: {
+        required: true,
+        minLength: 3,
+        maxLength: 30,
+        strength: {
+          custom: /^[a-zа-яё\s]+$/iu,
+        }
+      },
+      tel: {
+        required: true,
+        function: (name, value) => {
+          const phone = telMask.inputmask.unmaskedvalue()
+          console.log(phone)
+          return Number(phone) && phone.length === 10
+        }
+      },
+    },
+    messages: {
+      name: {
+        required: "Введите Ваше имя",
+        minLength: "Имя слишком короткое",
+        strength: "Недопустимый формат"
+      },
+      tel: {
+        required: "Введите Ваш телефон",
+        function: 'Недопустимый формат'
+      },
+    },
+    submitHandler: function(form) {
+      const formData = new FormData(form);
+      console.log(formData)
 
-  validation
-      .addField('#contact-name', [
-        {
-          rule: 'minLength',
-          value: 3,
-          errorMessage: 'Имя слишком короткое',
-        },
-        {
-          rule: 'customRegexp',
-          value: /^[a-zа-яё\s]+$/iu,
-          errorMessage: 'Недопустимый формат',
-        },
-        {
-          rule: 'maxLength',
-          value: 30,
-        },
-        {
-          rule: 'required',
-          errorMessage: 'Введите Ваше имя',
-        },
-      ])
-      .addField('#contact-phone', [
-        {
-          validator: (name, val) => {
-            const phone = selector.inputmask.unmaskedvalue()
-            return Number(phone) && phone.length === 10
-          },
-          errorMessage: `Введите Ваш телефон`,
-        },
-      ])
-      .onSuccess(() => {
-        const form = document.querySelector('.contacts__top-form')
-        const formData = new FormData(form);
+      const xhr = new XMLHttpRequest();
+      console.log(xhr)
 
-        const xhr = new XMLHttpRequest();
-
-        xhr.onreadystatechange = function() {
-          if (xhr.readyState === 4) {
-            if (xhr.status === 200) {
-              console.log('Отправлено');
-            }
+      xhr.onreadystatechange = function() {
+        if (xhr.readyState === 4) {
+          if (xhr.status === 200) {
+            console.log('Отправлено');
           }
         }
+      }
 
-        xhr.open('POST', 'mail.php', true);
-        xhr.send(formData);
+      xhr.open('POST', 'mail.php', true);
+      xhr.send(formData);
 
-        form.reset();
-      })
+      form.reset();
+    }
+  });
 
 
-  // // E-mail Ajax Send
-  // $(".contacts__top-form").submit(function() {
-  //   const th = $(this);
-  //   $.ajax({
-  //     type: "POST",
-  //     url: "../php/mail.php",
-  //     data: th.serialize()
-  //   }).done(function() {
-  //     console.log('отправлено')
-  //     setTimeout(function() {
-  //       th.trigger("reset");
-  //     }, 1000);
-  //   });
-  //   return false;
-  // });
+
+  // не работает. Ошибки на Foreach прям с первого..
+  /*  const validation = new JustValidate('.contacts__top-form', {
+      tooltip: {
+        position: 'top',
+      },
+    });
+    validation
+        .addField('#contact-name', [
+          {
+            rule: 'minLength',
+            value: 3,
+            errorMessage: 'Имя слишком короткое',
+          },
+          {
+            rule: 'customRegexp',
+            value: /^[a-zа-яё\s]+$/iu,
+            errorMessage: 'Недопустимый формат',
+          },
+          {
+            rule: 'maxLength',
+            value: 30,
+          },
+          {
+            rule: 'required',
+            errorMessage: 'Введите Ваше имя',
+          },
+        ])
+        .addField('#contact-phone', [
+          {
+            validator: (name, val) => {
+              const phone = telMask.inputmask.unmaskedvalue()
+              return Number(phone) && phone.length === 10
+            },
+            errorMessage: `Введите Ваш телефон`,
+          },
+        ])
+        .onSuccess(function(form) {
+          const formData = new FormData(form.currentTarget);
+
+          const xhr = new XMLHttpRequest();
+
+          xhr.onreadystatechange = function() {
+            if (xhr.readyState === 4) {
+              if (xhr.status === 200) {
+                console.log('Отправлено');
+              }
+            }
+          }
+
+          xhr.open('POST', 'mail.php', true);
+          xhr.send(formData);
+
+          form.currentTarget.reset();
+        })*/
+
+
 
   /* validate form end */
 

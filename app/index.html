@@ -998,22 +998,23 @@
           </p>
         </div>
 
-        <form class="contacts__top-form" id="subscribe" action="mail.php" method="post">
-          <input type="hidden" name="admin_email[]" value="kribedko@yandex.ru">
+        <form class="contacts__top-form" enctype="multipart/form-data" id="subscribe" action="" method="post">
           <input type="hidden" name="admin_email[]" value="kribedko@gmail.com">
-          <input type="hidden" name="form_subject" value="Blanchard. Форма заказа обратного звонка">
+          <input type="hidden" name="admin_email[]" value="kribedko@yandex.ru">
+          <input type="hidden" name="form_subject" value="Blanchard. Заявка на обратный звонок">
+
 
           <label class="contacts__top-form-label" for="contact-name">
             <span class="visually-hidden">Введите имя</span>
-            <input class="contacts__top-form-input contacts__top-form-input_name" id="contact-name" type="text" placeholder="Имя*">
+            <input class="contacts__top-form-input contacts__top-form-input_name" id="contact-name" type="text" placeholder="Имя*" data-validate-field="name" name="user_name">
           </label>
 
           <label class="contacts__top-form-label" for="contact-phone">
             <span class="visually-hidden">Введите телефон</span>
-            <input class="contacts__top-form-input contacts__top-form-input_tel" id="contact-phone" type="tel" placeholder="Телефон*">
+            <input class="contacts__top-form-input contacts__top-form-input_tel" id="contact-phone" type="tel" placeholder="Телефон*" data-validate-field="tel" name="user_phone">
           </label>
 
-          <button class="contacts__top-form-btn contacts__top-form-btn_desktop btn" type="submit">Заказать обратный звонок</button>
+          <button class="contacts__top-form-btn contacts__top-form-btn_desktop btn" >Заказать обратный звонок</button>
           <button class="contacts__top-form-btn contacts__top-form-btn_mobile btn" type="submit">Заказать</button>
         </form>
 

@@ -944,6 +944,17 @@
   transform: translateY(7px);
 }
 
+.contacts__top-form-label {
+  position: relative;
+}
+
+.js-validate-error-label {
+  position: absolute;
+  left: 6%;
+  top: 0;
+  transform: translateY(-32px);
+}
+
 .contacts .just-validate-error-field {
 
   border: 1px solid #D11616;

@@ -1,62 +1,33 @@
 <?
 require_once 'PHPMailer/PHPMailerAutoload.php';
 
-$admin_email = array();
-foreach ( $_POST["admin_email"] as $key => $value ) {
-	array_push($admin_email, $value);
-}
-
-$form_subject = trim($_POST["form_subject"]);
-
 $mail = new PHPMailer;
 $mail->CharSet = 'UTF-8';
 
-
-
-$c = true;
-$message = '';
-foreach ( $_POST as $key => $value ) {
-	if ( $value != ""  && $key != "admin_email" && $key != "form_subject" ) {
-		if (is_array($value)) {
-			$val_text = '';
-			foreach ($value as $val) {
-				if ($val && $val != '') {
-					$val_text .= ($val_text==''?'':', ').$val;
-				}
-			}
-			$value = $val_text;
-		}
-		$message .= "
-		" . ( ($c = !$c) ? '<tr>':'<tr>' ) . "
-		<td style='padding: 10px; width: auto;'><b>$key:</b></td>
-		<td style='padding: 10px;width: 100%;'>$value</td>
-		</tr>
-		";
-	}
-}
-$message = "<table style='width: 50%;'>$message</table>";
+$name = $_POST['user_name'];
+$phone = $_POST['user_phone'];
 
 
 // От кого
 $mail->setFrom('adm@' . $_SERVER['HTTP_HOST'], 'Your best site');
  
 // Кому
-foreach ( $admin_email as $key => $value ) {
-	$mail->addAddress($value);
-}
+$mail->addAddress('kribedko@yandex.ru');
+$mail->addAddress('kribedko@gmail.com');
+
 // Тема письма
-$mail->Subject = $form_subject;
+$mail->Subject = 'Заявка с тестового сайта';
  
 // Тело письма
-$body = $message;
-// $mail->isHTML(true);  это если прям верстка
-$mail->msgHTML($body);
+$mail->isHTML(true);                                  // Set email format to HTML
 
-// Приложения
-if ($_FILES){
-	foreach ( $_FILES['file']['tmp_name'] as $key => $value ) {
-		$mail->addAttachment($value, $_FILES['file']['name'][$key]);
-	}
+$mail->Subject = 'Заявка с тестового сайта';
+$mail->Body    = 'Пользователь <b>' . $name . '</b> оставил заявку. <br> Его телефон <b>' .$phone. '</b>';
+$mail->AltBody = '';
+
+if(!$mail->send()) {
+    echo 'Error';
+} else {
+    echo 'Ok';
 }
-$mail->send();
 ?>
