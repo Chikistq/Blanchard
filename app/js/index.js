@@ -383,10 +383,7 @@ document.addEventListener('DOMContentLoaded', function() {
   const im = new Inputmask("+7 (999)999 99 99");
   im.mask(telMask);
 
-
-  /* пример из видео максима. валидация работает, но форма улетает пустая.
-  * к тому же сбивается верстка тултипов
-  * чтобы метод работал необходимо раскоментировать подключение локального файла с плагином, а импорт из Node Mod... в комент*/
+  /* чтобы метод работал необходимо раскоментировать подключение локального файла с плагином, а импорт из Node Mod... в комент*/
   new window.JustValidate('.contacts__top-form', {
     tooltip: {
       position: 'top',
@@ -442,9 +439,9 @@ document.addEventListener('DOMContentLoaded', function() {
     }
   });
 
-
-
-  // не работает. Ошибки на Foreach прям с первого..
+  // Работает но не корректно. $_POST идет пустой, изза этого
+  // сразу ошибки на foreach... если указать все данные в php вручную, то
+  // работает.. Так и не разобрался в чем дело.
   /*  const validation = new JustValidate('.contacts__top-form', {
       tooltip: {
         position: 'top',
@@ -499,11 +496,7 @@ document.addEventListener('DOMContentLoaded', function() {
           form.currentTarget.reset();
         })*/
 
-
-
   /* validate form end */
-
-
 
 })
 
