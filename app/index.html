@@ -998,11 +998,10 @@
           </p>
         </div>
 
-        <form class="contacts__top-form" id="subscribe" action="" method="post">
-          <input type="hidden" name="project_name" value="Blanchard — художественная галерея">
-          <input type="hidden" name="admin_email" value="kribedko@yandex.ru">
-          <input type="hidden" name="form_subject" value="Форма заказа обратного звонка">
-
+        <form class="contacts__top-form" id="subscribe" action="mail.php" method="post">
+          <input type="hidden" name="admin_email[]" value="kribedko@yandex.ru">
+          <input type="hidden" name="admin_email[]" value="kribedko@gmail.com">
+          <input type="hidden" name="form_subject" value="Blanchard. Форма заказа обратного звонка">
 
           <label class="contacts__top-form-label" for="contact-name">
             <span class="visually-hidden">Введите имя</span>

@@ -449,23 +449,43 @@ document.addEventListener('DOMContentLoaded', function() {
           },
           errorMessage: `Введите Ваш телефон`,
         },
-      ]);
+      ])
+      .onSuccess(() => {
+        const form = document.querySelector('.contacts__top-form')
+        const formData = new FormData(form);
 
-  // E-mail Ajax Send
-  $(".contacts__top-form").submit(function() {
-    const th = $(this);
-    $.ajax({
-      type: "POST",
-      url: "../php/mail.php",
-      data: th.serialize()
-    }).done(function() {
-      console.log('отправлено')
-      setTimeout(function() {
-        th.trigger("reset");
-      }, 1000);
-    });
-    return false;
-  });
+        const xhr = new XMLHttpRequest();
+
+        xhr.onreadystatechange = function() {
+          if (xhr.readyState === 4) {
+            if (xhr.status === 200) {
+              console.log('Отправлено');
+            }
+          }
+        }
+
+        xhr.open('POST', 'mail.php', true);
+        xhr.send(formData);
+
+        form.reset();
+      })
+
+
+  // // E-mail Ajax Send
+  // $(".contacts__top-form").submit(function() {
+  //   const th = $(this);
+  //   $.ajax({
+  //     type: "POST",
+  //     url: "../php/mail.php",
+  //     data: th.serialize()
+  //   }).done(function() {
+  //     console.log('отправлено')
+  //     setTimeout(function() {
+  //       th.trigger("reset");
+  //     }, 1000);
+  //   });
+  //   return false;
+  // });
 
   /* validate form end */
 

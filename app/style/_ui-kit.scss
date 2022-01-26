@@ -156,6 +156,11 @@
   outline: 1px solid $accent-color;
 }
 
+#gallery .choices__list--single:hover,
+#gallery .choices__list--single:focus {
+  background-color: rgba(255, 255, 255, .2);
+}
+
 #projects .projects__btn-prev:hover,
 #projects .projects__btn-next:hover,
 .events .swiper-button-prev:hover,

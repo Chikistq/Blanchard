@@ -284,14 +284,20 @@
 #gallery .choices {
   left: 0;
   top: 10px;
-  padding: 6px 10px 8px;
   border-radius: 6px;
   border: 1px #fff solid;
+
+}
+
+#gallery .choices__list--single {
+  padding: 10px 26px 12px 14px;
+  background-color: rgba(255, 255, 255, 0);
+  transition: background-color .2s ease-in;
 }
 
 .choices__inner {
   vertical-align: center;
-  background-color: inherit;
+  background-color: initial;
   padding: 0;
   border: none;
   font-size: inherit;
@@ -329,6 +335,7 @@
 }
 
 #gallery .choices__list--dropdown .choices__item--selectable.is-highlighted {
+  color: #fff;
   background-color: rgb(255 255 255 / 20%);
 }
 
