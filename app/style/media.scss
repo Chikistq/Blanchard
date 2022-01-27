@@ -86,6 +86,10 @@
     width: 100%;
   }
 
+  .catalog-card__descr_empry {
+    width: 95%;
+  }
+
   .catalog__items-card {
     padding-right: 25px;
   }
@@ -408,6 +412,10 @@
 
   .catalog__descr {
     margin: 0 0 21px;
+  }
+
+  .catalog-card__descr_empry {
+    width: 60%;
   }
 
   .accordion-item__body-list {
@@ -894,6 +902,11 @@
 
   .catalog-card__title {
     margin: 0 0 14px;
+  }
+
+  .catalog-card__descr_empry {
+    width: 86%;
+    margin-bottom: 5px;
   }
 
   .body-empty__left {

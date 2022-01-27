@@ -457,6 +457,12 @@
 
 .catalog__items-card {
   padding-right: 50px;
+  opacity: 0;
+}
+
+.catalog__items-card.is-active {
+  opacity: 1;
+  transition: opacity .3s ease-in;
 }
 
 
@@ -474,6 +480,12 @@
   font-size: 12px;
   line-height: 16px;
   color: #999;
+}
+
+.catalog-card__descr_empry{
+  margin-bottom: 15px;
+  width: 55%;
+  line-height: 22px;
 }
 
 #catalog .ui-accordion-header {
@@ -510,7 +522,8 @@
 }
 
 .ui-accordion-header-active .accordion-item__head-title {
-  color: $active-color
+  color: $active-color;
+  background-color: initial;
 }
 
 .ui-accordion-header-active .accordion-item__head-btn {

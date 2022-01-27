@@ -14,6 +14,7 @@
 .links:focus,
 #header .choices:focus {
   background-color: $active-color;
+  color: #fff;
 }
 
 .links:hover,
@@ -95,10 +96,17 @@
   background-color: inherit;
   color: $active-color;
   border: none;
+  margin-bottom: 0;
 }
 
 .accordion-item__head:hover .accordion-item__head-title {
   color: $accent-color;
+  background-color: initial;
+}
+
+.accordion-item__head:active .accordion-item__head-title {
+  color: $active-color;
+  background-color: initial;
 }
 
 .accordion-item__head:hover .accordion-item__head-btn {

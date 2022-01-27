@@ -28,6 +28,7 @@ import '@/js/just-validate.min'
 
 import '@/style/main.scss'
 import '@/style/media.scss'
+import {createAuthorCards} from '@/js/catalogAutor';
 
 /* eslint-disable-next-line no-unused-vars */
 const elementClosest = require('element-closest');
@@ -178,9 +179,6 @@ document.addEventListener('DOMContentLoaded', function() {
   });
 
 
-
-
-
   /* dropdown { */
   const params = {
     btnClassName: "js-header-dropdown-btn",
@@ -229,10 +227,6 @@ document.addEventListener('DOMContentLoaded', function() {
 
   setMenuListener();
   /* } dropdown end */
-
-
-
-
 
 
   /* gallery-selects */
@@ -337,7 +331,6 @@ document.addEventListener('DOMContentLoaded', function() {
   /* gallery-modal end */
 
 
-
   /* catalog */
   $('#accordion').accordion({
     collapsible: true,
@@ -346,24 +339,40 @@ document.addEventListener('DOMContentLoaded', function() {
     heightStyle: "content",
 
   })
+
+  // смена авторов
+  createAuthorCards(12)
+  document.querySelectorAll('.accordion-item__body-link').forEach(link => {
+    link.addEventListener('click', (e) => {
+      e.preventDefault()
+      const i = e.currentTarget.dataset.link_id
+      createAuthorCards(i)
+
+      if (document.documentElement.clientWidth < 992) {
+        document.querySelector('.catalog__items-card').scrollIntoView({
+          behavior: 'smooth',
+          block: 'center'
+        })
+      }
+
+      // перезапуск скрола для ссылки "в галлерею"
+      const gLink = document.querySelector('.body-empty__right-link')
+      gLink.addEventListener('click', function(e) {
+        e.preventDefault();
+        console.log('1')
+        document.querySelector('#gallery').scrollIntoView({
+          behavior: 'smooth',
+          block: 'start'
+        })
+      })
+    })
+  })
   /* catalog end */
 
 
 
 
-  /* scroll*/
-  const smoothLinks = document.querySelectorAll('a[href^="#"]')
-  for (const smoothLink of smoothLinks) {
-    smoothLink.addEventListener('click', function(e) {
-      e.preventDefault();
-      const id = smoothLink.getAttribute('href')
 
-      document.querySelector(id).scrollIntoView({
-        behavior: 'smooth',
-        block: 'start'
-      })
-    })
-  }
 
   tippy('#tooltip1', {
     content: 'Пример современных тенденций - современная методология разработки',
@@ -497,6 +506,22 @@ document.addEventListener('DOMContentLoaded', function() {
         })*/
 
   /* validate form end */
+
+
+  /* scroll*/
+  const smoothLinks = document.querySelectorAll('a[href^="#"]')
+  for (const smoothLink of smoothLinks) {
+    smoothLink.addEventListener('click', function(e) {
+      e.preventDefault();
+      const id = smoothLink.getAttribute('href')
+      if (id.length > 1) {
+        document.querySelector(id).scrollIntoView({
+          behavior: 'smooth',
+          block: 'start'
+        })
+      }
+    })
+  }
 
 })
 
