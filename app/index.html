@@ -31,9 +31,6 @@
         <a class="nav-mobile__link links" href="#events">События</a>
       </li>
       <li class="nav-mobile__list">
-        <a class="nav-mobile__link links" href="#catalog">Издания</a>
-      </li>
-      <li class="nav-mobile__list">
         <a class="nav-mobile__link links" href="#projects">Проекты</a>
       </li>
       <li class="nav-mobile__list">
@@ -87,11 +84,6 @@
               </a>
             </li>
             <li class="header__list">
-              <a class="header__link links" href="#catalog">
-                Издания
-              </a>
-            </li>
-            <li class="header__list">
               <a class="header__link links" href="#projects">
                 Проекты
               </a>
@@ -104,14 +96,15 @@
           </ul>
 
 
-          <a class="header__login links" href="#">
-            <svg width="13" height="13" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M5.12056 9.09278L6.13889 10.1111L9.75 6.5L6.13889 2.88889L5.12056 3.90722L6.98389 5.77778H0V7.22222H6.98389L5.12056 9.09278ZM11.5556 0H1.44444C0.642778 0 0 0.65 0 1.44444V4.33333H1.44444V1.44444H11.5556V11.5556H1.44444V8.66667H0V11.5556C0 12.35 0.642778 13 1.44444 13H11.5556C12.35 13 13 12.35 13 11.5556V1.44444C13 0.65 12.35 0 11.5556 0Z" fill="white"></path>
-            </svg>
-
-            Войти
-          </a>
         </nav>
+
+        <a class="header__login links" href="#">
+          <svg width="13" height="13" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M5.12056 9.09278L6.13889 10.1111L9.75 6.5L6.13889 2.88889L5.12056 3.90722L6.98389 5.77778H0V7.22222H6.98389L5.12056 9.09278ZM11.5556 0H1.44444C0.642778 0 0 0.65 0 1.44444V4.33333H1.44444V1.44444H11.5556V11.5556H1.44444V8.66667H0V11.5556C0 12.35 0.642778 13 1.44444 13H11.5556C12.35 13 13 12.35 13 11.5556V1.44444C13 0.65 12.35 0 11.5556 0Z" fill="white"></path>
+          </svg>
+
+          Войти
+        </a>
 
         <!--        поиск, раскрытие с 1024px  -->
         <a class="header__top-search-btn" href="#">
@@ -161,11 +154,7 @@
           <div class="dropdown__drop js-header-drop" data-target="one">
             <div class="dropdown__drop-wrap" data-simplebar>
               <ul class="dropdown__drop-list">
-                <li class="dropdown__drop-item ">
-                  <a class="dropdown__item-link drop1-bg-1 dropdown__item-tintoretto" href="#">
-                    <span class="dropdown__item-text">Тинторрето</span>
-                  </a>
-                </li>
+                <li class="dropdown__drop-item "><a class="dropdown__item-link drop1-bg-1 dropdown__item-tintoretto" href="#"><span class="dropdown__item-text">Тинторрето</span></a></li>
                 <li class="dropdown__drop-item "><a class="dropdown__item-link drop1-bg-2 dropdown__item-fridrih" href="#">Фридрих</a></li>
                 <li class="dropdown__drop-item "><a class="dropdown__item-link drop1-bg-3 dropdown__item-leo" href="#">Леонардо</a></li>
                 <li class="dropdown__drop-item "><a class="dropdown__item-link drop1-bg-4 dropdown__item-tintoretto" href="#">Верроккьо</a></li>
@@ -334,174 +323,180 @@
       </div>
 
       <div class="gallery__slider">
+        <!-- If we need pagination -->
+        <div class="swiper-pagination"></div>
+
+        <!-- If we need navigation buttons -->
+        <button class="swiper-button-prevG"></button>
+        <button class="swiper-button-nextG"></button>
 
         <div class="swiper-gallery swiper">
           <!-- Additional required wrapper -->
           <div class="swiper-wrapper">
             <!-- Slides -->
             <div class="swiper-slide" tabindex="0">
-              <picture class="gallery__slider-img">
+              <picture>
                 <source media="(max-width: 576px)" srcset="img/gallery/mob/mobile1.jpg">
                 <source media="(max-width: 992px)" srcset="img/gallery/sm/smgallery1.jpg">
                 <img class="gallery__slider-img" src="img/gallery/lg/gallery1.jpg" data-id="1" alt="Картина 1">
               </picture>
             </div>
             <div class="swiper-slide" tabindex="0">
-              <picture class="gallery__slider-img">
+              <picture>
                 <source media="(max-width: 576px)" srcset="img/gallery/mob/mobile2.jpg">
                 <source media="(max-width: 992px)" srcset="img/gallery/sm/smgallery2.jpg">
                 <img class="gallery__slider-img" src="img/gallery/lg/gallery2.jpg" data-id="2" alt="Картина 2">
               </picture>
             </div>
             <div class="swiper-slide" tabindex="0">
-              <picture class="gallery__slider-img">
+              <picture>
                 <source media="(max-width: 576px)" srcset="img/gallery/mob/mobile3.jpg">
                 <source media="(max-width: 992px)" srcset="img/gallery/sm/smgallery3.jpg">
                 <img class="gallery__slider-img" src="img/gallery/lg/gallery3.jpg" data-id="3" alt="Картина 3">
               </picture>
             </div>
             <div class="swiper-slide" tabindex="0">
-              <picture class="gallery__slider-img">
+              <picture>
                 <source media="(max-width: 576px)" srcset="img/gallery/mob/mobile4.jpg">
                 <source media="(max-width: 992px)" srcset="img/gallery/sm/smgallery4.jpg">
                 <img class="gallery__slider-img" src="img/gallery/lg/gallery4.jpg" data-id="4" alt="Картина 4">
               </picture>
             </div>
             <div class="swiper-slide" tabindex="0">
-              <picture class="gallery__slider-img">
+              <picture>
                 <source media="(max-width: 576px)" srcset="img/gallery/mob/mobile5.jpg">
                 <source media="(max-width: 992px)" srcset="img/gallery/sm/smgallery5.jpg">
                 <img class="gallery__slider-img" src="img/gallery/lg/gallery5.jpg" data-id="5" alt="Картина 5">
               </picture>
             </div>
             <div class="swiper-slide" tabindex="0">
-              <picture class="gallery__slider-img">
+              <picture>
                 <source media="(max-width: 576px)" srcset="img/gallery/mob/mobile6.jpg">
                 <source media="(max-width: 992px)" srcset="img/gallery/sm/smgallery6.jpg">
                 <img class="gallery__slider-img" src="img/gallery/lg/gallery6.jpg" data-id="6" alt="Картина 6">
               </picture>
             </div>
             <div class="swiper-slide" tabindex="0">
-              <picture class="gallery__slider-img">
+              <picture>
                 <source media="(max-width: 576px)" srcset="img/gallery/mob/mobile7.jpg">
                 <source media="(max-width: 992px)" srcset="img/gallery/sm/smgallery7.jpg">
                 <img class="gallery__slider-img" src="img/gallery/lg/gallery7.jpg" data-id="7" alt="Картина 7">
               </picture>
             </div>
             <div class="swiper-slide" tabindex="0">
-              <picture class="gallery__slider-img">
+              <picture>
                 <source media="(max-width: 576px)" srcset="img/gallery/mob/mobile8.jpg">
                 <source media="(max-width: 992px)" srcset="img/gallery/sm/smgallery8.jpg">
                 <img class="gallery__slider-img" src="img/gallery/lg/gallery8.jpg" data-id="8" alt="Картина 8">
               </picture>
             </div>
             <div class="swiper-slide" tabindex="0">
-              <picture class="gallery__slider-img">
+              <picture>
                 <source media="(max-width: 576px)" srcset="img/gallery/mob/mobile9.jpg">
                 <source media="(max-width: 992px)" srcset="img/gallery/sm/smgallery9.jpg">
                 <img class="gallery__slider-img" src="img/gallery/lg/gallery9.jpg" data-id="9" alt="Картина 9">
               </picture>
             </div>
             <div class="swiper-slide" tabindex="0">
-              <picture class="gallery__slider-img">
+              <picture>
                 <source media="(max-width: 576px)" srcset="img/gallery/mob/mobile10.jpg">
                 <source media="(max-width: 992px)" srcset="img/gallery/sm/smgallery10.jpg">
                 <img class="gallery__slider-img" src="img/gallery/lg/gallery10.jpg" data-id="10" alt="Картина 10">
               </picture>
             </div>
             <div class="swiper-slide" tabindex="0">
-              <picture class="gallery__slider-img">
+              <picture>
                 <source media="(max-width: 576px)" srcset="img/gallery/mob/mobile11.jpg">
                 <source media="(max-width: 992px)" srcset="img/gallery/sm/smgallery11.jpg">
                 <img class="gallery__slider-img" src="img/gallery/lg/gallery11.jpg" data-id="11" alt="Картина 11">
               </picture>
             </div>
             <div class="swiper-slide" tabindex="0">
-              <picture class="gallery__slider-img">
+              <picture>
                 <source media="(max-width: 576px)" srcset="img/gallery/mob/mobile12.jpg">
                 <source media="(max-width: 992px)" srcset="img/gallery/sm/smgallery12.jpg">
                 <img class="gallery__slider-img" src="img/gallery/lg/gallery12.jpg" data-id="12" alt="Картина 12">
               </picture>
             </div>
             <div class="swiper-slide" tabindex="0">
-              <picture class="gallery__slider-img">
+              <picture>
                 <source media="(max-width: 576px)" srcset="img/gallery/mob/mobile13.jpg">
                 <source media="(max-width: 992px)" srcset="img/gallery/sm/smgallery13.jpg">
                 <img class="gallery__slider-img" src="img/gallery/lg/gallery13.jpg" data-id="13" alt="Картина 13">
               </picture>
             </div>
             <div class="swiper-slide" tabindex="0">
-              <picture class="gallery__slider-img">
+              <picture>
                 <source media="(max-width: 576px)" srcset="img/gallery/mob/mobile14.jpg">
                 <source media="(max-width: 992px)" srcset="img/gallery/sm/smgallery14.jpg">
                 <img class="gallery__slider-img" src="img/gallery/lg/gallery14.jpg" data-id="14" alt="Картина 14">
               </picture>
             </div>
             <div class="swiper-slide" tabindex="0">
-              <picture class="gallery__slider-img">
+              <picture>
                 <source media="(max-width: 576px)" srcset="img/gallery/mob/mobile15.jpg">
                 <source media="(max-width: 992px)" srcset="img/gallery/sm/smgallery15.jpg">
                 <img class="gallery__slider-img" src="img/gallery/lg/gallery15.jpg" data-id="15" alt="Картина 15">
               </picture>
             </div>
             <div class="swiper-slide" tabindex="0">
-              <picture class="gallery__slider-img">
+              <picture>
                 <source media="(max-width: 576px)" srcset="img/gallery/mob/mobile16.jpg">
                 <source media="(max-width: 992px)" srcset="img/gallery/sm/smgallery16.jpg">
                 <img class="gallery__slider-img" src="img/gallery/lg/gallery16.jpg" data-id="16" alt="Картина 16">
               </picture>
             </div>
             <div class="swiper-slide" tabindex="0">
-              <picture class="gallery__slider-img">
+              <picture>
                 <source media="(max-width: 576px)" srcset="img/gallery/mob/mobile17.jpg">
                 <source media="(max-width: 992px)" srcset="img/gallery/sm/smgallery17.jpg">
                 <img class="gallery__slider-img" src="img/gallery/lg/gallery17.jpg" data-id="17" alt="Картина 17">
               </picture>
             </div>
             <div class="swiper-slide" tabindex="0">
-              <picture class="gallery__slider-img">
+              <picture>
                 <source media="(max-width: 576px)" srcset="img/gallery/mob/mobile18.jpg">
                 <source media="(max-width: 992px)" srcset="img/gallery/sm/smgallery18.jpg">
                 <img class="gallery__slider-img" src="img/gallery/lg/gallery18.jpg" data-id="18" alt="Картина 18">
               </picture>
             </div>
             <div class="swiper-slide" tabindex="0">
-              <picture class="gallery__slider-img">
+              <picture>
                 <source media="(max-width: 576px)" srcset="img/gallery/mob/mobile19.jpg">
                 <source media="(max-width: 992px)" srcset="img/gallery/sm/smgallery19.jpg">
                 <img class="gallery__slider-img" src="img/gallery/lg/gallery19.jpg" data-id="19" alt="Картина 19">
               </picture>
             </div>
             <div class="swiper-slide" tabindex="0">
-              <picture class="gallery__slider-img">
+              <picture>
                 <source media="(max-width: 576px)" srcset="img/gallery/mob/mobile20.jpg">
                 <source media="(max-width: 992px)" srcset="img/gallery/sm/smgallery20.jpg">
                 <img class="gallery__slider-img" src="img/gallery/lg/gallery20.jpg" data-id="20" alt="Картина 20">
               </picture>
             </div>
             <div class="swiper-slide" tabindex="0">
-              <picture class="gallery__slider-img">
+              <picture>
                 <source media="(max-width: 576px)" srcset="img/gallery/mob/mobile21.jpg">
                 <source media="(max-width: 992px)" srcset="img/gallery/sm/smgallery21.jpg">
                 <img class="gallery__slider-img" src="img/gallery/lg/gallery21.jpg" data-id="21" alt="Картина 21">
               </picture>
             </div>
             <div class="swiper-slide" tabindex="0">
-              <picture class="gallery__slider-img">
+              <picture>
                 <source media="(max-width: 576px)" srcset="img/gallery/mob/mobile22.jpg">
                 <source media="(max-width: 992px)" srcset="img/gallery/sm/smgallery22.jpg">
                 <img class="gallery__slider-img" src="img/gallery/lg/gallery22.jpg" data-id="22" alt="Картина 22">
               </picture>
             </div>
             <div class="swiper-slide" tabindex="0">
-              <picture class="gallery__slider-img">
+              <picture>
                 <source media="(max-width: 576px)" srcset="img/gallery/mob/mobile23.jpg">
                 <source media="(max-width: 992px)" srcset="img/gallery/sm/smgallery23.jpg">
                 <img class="gallery__slider-img" src="img/gallery/lg/gallery23.jpg" data-id="23" alt="Картина 23">
               </picture>
             </div>
             <div class="swiper-slide" tabindex="0">
-              <picture class="gallery__slider-img">
+              <picture>
                 <source media="(max-width: 576px)" srcset="img/gallery/mob/mobile24.jpg">
                 <source media="(max-width: 992px)" srcset="img/gallery/sm/smgallery24.jpg">
                 <img class="gallery__slider-img" src="img/gallery/lg/gallery24.jpg" data-id="24" alt="Картина 24">
@@ -509,13 +504,9 @@
             </div>
           </div>
 
-          <!-- If we need pagination -->
-          <div class="swiper-pagination"></div>
 
-          <!-- If we need navigation buttons -->
-          <div class="swiper-button-prevG"></div>
-          <div class="swiper-button-nextG"></div>
         </div>
+
 
       </div>
 
@@ -800,103 +791,117 @@
       <h2 class="events__title section-title">
         События
       </h2>
-      <div class="events__btn-prev swiper-button-prev"></div>
-      <div class="events__btn-next swiper-button-next"></div>
+      <button class="events__btn-prev swiper-button-prev"></button>
+      <button class="events__btn-next swiper-button-next"></button>
 
       <div class="events__slider-wrap swiper">
         <div class="swiper-wrapper">
           <!-- Slides -->
-          <div class="swiper-slide">
-            <div class="events__item flex event-bg1">
-              <span class="events__item-location">
+          <div class="swiper-slide event-card flex">
+            <div class="event-card__top event-bg1"></div>
+            <div class="event-card__bottom flex">
+              <span class="event-card__bottom-location">
                 Музей им. Щусева
               </span>
-              <span class="events__item-date">
+              <span class="event-card__bottom-date">
                 с&nbsp;20&nbsp;марта по&nbsp;30&nbsp;апреля
               </span>
-              <h3 class="events__item-title inside-titles">
+              <h3 class="event-card__bottom-title inside-titles">
                 Книжная гравюра в живом восприятии
               </h3>
-              <p class="events__item-descr text">
+              <p class="event-card__bottom-descr text">
                 Один из&nbsp;ведущих флорентийских художников Кватроченто, основатель художественной династии, которую продолжили его брат Давид и&nbsp;сын Ридольфо.
               </p>
-              <a class="events__item-link links" href="#">
+              <a class="event-card__bottom-link links" href="#">
                 Подробнее
               </a>
             </div>
           </div>
-          <div class="swiper-slide">
-            <div class="events__item flex event-bg2">
-              <span class="events__item-location">ММОМА</span>
-              <span class="events__item-date">24&nbsp;марта 19:00</span>
-              <h3 class="events__item-title inside-titles">
+
+          <div class="swiper-slide event-card flex">
+            <div class="event-card__top event-bg2"></div>
+            <div class="event-card__bottom flex">
+              <span class="event-card__bottom-location">
+                ММОМА
+              </span>
+              <span class="event-card__bottom-date">
+                24&nbsp;марта 19:00
+              </span>
+              <h3 class="event-card__bottom-title inside-titles">
                 &laquo;Открытая дискуссия&raquo;. Дмитрий Петров и&nbsp;Сергей Ильин.
               </h3>
-              <p class="events__item-descr text">
+              <p class="event-card__bottom-descr text">
                 Высокий уровень вовлечения представителей целевой аудитории является четким доказательством простого факта.
               </p>
-              <a class="events__item-link links" href="#">
+              <a class="event-card__bottom-link links" href="#">
                 Подробнее
               </a>
             </div>
           </div>
-          <div class="swiper-slide">
-            <div class="events__item flex event-bg3">
-              <span class="events__item-location">
+
+          <div class="swiper-slide event-card flex">
+            <div class="event-card__top event-bg3"></div>
+            <div class="event-card__bottom flex">
+              <span class="event-card__bottom-location">
                 Еврейский музей
               </span>
-              <span class="events__item-date">
+              <span class="event-card__bottom-date">
                 с&nbsp;31&nbsp;марта по&nbsp;21&nbsp;апреля
               </span>
-              <h3 class="events__item-title inside-titles">
+              <h3 class="event-card__bottom-title inside-titles">
                 Выставка «Формация 2020»
               </h3>
-              <p class="events__item-descr text">
+              <p class="event-card__bottom-descr text">
                 Идейные соображения высшего порядка, а&nbsp;также современная методология разработки играет важную роль в&nbsp;формировании глубокомысленных рассуждений.
               </p>
-              <a class="events__item-link links" href="#">
+              <a class="event-card__bottom-link links" href="#">
                 Подробнее
               </a>
             </div>
           </div>
-          <div class="swiper-slide">
-            <div class="events__item flex event-bg4">
-              <span class="events__item-location">
+
+          <div class="swiper-slide event-card flex">
+            <div class="event-card__top event-bg4"></div>
+            <div class="event-card__bottom flex">
+              <span class="event-card__bottom-location">
                 ММАМ
               </span>
-              <span class="events__item-date">
+              <span class="event-card__bottom-date">
                 с&nbsp;8&nbsp;апреля по&nbsp;20&nbsp;мая
               </span>
-              <h3 class="events__item-title inside-titles">
+              <h3 class="event-card__bottom-title inside-titles">
                 Джон Винзор. Фотографии из серии &laquo;Метафора серебра&raquo;
               </h3>
-              <p class="events__item-descr text">
-                Один из&nbsp;ведущих флорентийских художников Кватроченто, основатель художественной династии, которую продолжили его брат Давид и&nbsp;сын Ридольфо.
+              <p class="event-card__bottom-descr text">
+                Один из&nbsp;ведущих флорентийских художников Кватроченто, основатель художественной династии, которую продолжили его брат Давид и&nbsp;сын Ридольфо
               </p>
-              <a class="events__item-link links" href="#">
+              <a class="event-card__bottom-link links" href="#">
                 Подробнее
               </a>
             </div>
           </div>
-          <div class="swiper-slide">
-            <div class="events__item flex event-bg5">
-              <span class="events__item-location">
+
+          <div class="swiper-slide event-card flex">
+            <div class="event-card__top event-bg5"></div>
+            <div class="event-card__bottom flex">
+              <span class="event-card__bottom-location">
                 Третьяковка на&nbsp;Крымском валу
               </span>
-              <span class="events__item-date">
+              <span class="event-card__bottom-date">
                 с&nbsp;30&nbsp;марта по&nbsp;30&nbsp;апреля
               </span>
-              <h3 class="events__item-title inside-titles">
+              <h3 class="event-card__bottom-title inside-titles">
                 XXIV Международная биеннале молодого искусства
               </h3>
-              <p class="events__item-descr text">
+              <p class="event-card__bottom-descr text">
                 Внезапно, реплицированные с&nbsp;зарубежных источников, современные исследования.
               </p>
-              <a class="events__item-link links" href="#">
+              <a class="event-card__bottom-link links" href="#">
                 Подробнее
               </a>
             </div>
           </div>
+
         </div>
 
         <div class="events__pagination"></div>
@@ -910,13 +915,13 @@
 
       <!--      с типографом
       <p class="projects__descr text">
-         Предварительные выводы: постоянное информационно-пропагандистское обеспечение нашей деятельности однозначно фиксирует необходимость своевременного выполнения сверхзадачи. А&nbsp;ещё независимые государства смешаны с&nbsp;не&nbsp;уникальными данными до&nbsp;степени совершенной неузнаваемости, из-за чего возрастает их&nbsp;статус бесполезности. Прежде всего, постоянное информационно-пропагандистское <span class="projects__tooltip" id="tooltip1">i</span> обеспечение нашей деятельности однозначно фиксирует необходимость экономической целесообразности принимаемых решений. И&nbsp;нет сомнений, что действия представителей оппозиции могут быть рассмотрены <span class="projects__tooltip" id="tooltip2">i</span> исключительно в&nbsp;разрезе маркетинговых и&nbsp;финансовых <span class="projects__tooltip" id="tooltip3">i</span> предпосылок. Банальные, но&nbsp;неопровержимые выводы, а&nbsp;также представители современных социальных резервов призывают нас к&nbsp;новым свершениям, которые, в&nbsp;свою очередь, должны быть смешаны с&nbsp;не&nbsp;уникальными данными до&nbsp;степени совершенной неузнаваемости. Подробнее:
+         Предварительные выводы: постоянное информационно-пропагандистское обеспечение нашей деятельности однозначно фиксирует необходимость своевременного выполнения сверхзадачи. А&nbsp;ещё независимые государства смешаны с&nbsp;не&nbsp;уникальными данными до&nbsp;степени совершенной неузнаваемости, из-за чего возрастает их&nbsp;статус бесполезности. Прежде всего, постоянное информационно-пропагандистское buttonspan class="projects__tooltip" id="tooltip1">i data-tippy-content="Another Tooltip"</span> обеспечение нашей деятельности однозначно фиксирует необходимость экономической целесообразности принимаемых решений. И&nbsp;нет сомнений, что действия представителей оппозиции могут быть рассмотрены buttonspan class="projects__tooltip" id="tooltip2">i data-tippy-content="Another Tooltip"</span> исключительно в&nbsp;разрезе маркетинговых и&nbsp;финансовых buttonspan class="projects__tooltip" id="tooltip3">i data-tippy-content="Another Tooltip"</span> предпосылок. Банальные, но&nbsp;неопровержимые выводы, а&nbsp;также представители современных социальных резервов призывают нас к&nbsp;новым свершениям, которые, в&nbsp;свою очередь, должны быть смешаны с&nbsp;не&nbsp;уникальными данными до&nbsp;степени совершенной неузнаваемости. Подробнее:
          <a href="#" class="projects__link projects-projects links ">blanchard-art.ru/projects</a><a href="#" class="projects__link projects-main links ">blanchard-art.ru</a><a href="#" class="projects__link projects-about links ">blanchard-art.ru/projects/about</a>
        </p>-->
 
 
       <p class="projects__descr text">
-        Предварительные выводы: постоянное информационно-пропагандистское обеспечение нашей деятельности однозначно фиксирует необходимость своевременного выполнения сверхзадачи. А ещё независимые государства смешаны с не уникальными данными до степени совершенной неузнаваемости, из-за чего возрастает их статус бесполезности. Прежде всего, постоянное информационно-пропагандистское <span class="projects__tooltip" id="tooltip1" tabindex="0">i</span> обеспечение нашей деятельности однозначно фиксирует необходимость экономической целесообразности принимаемых решений. И нет сомнений, что действия представителей оппозиции могут быть рассмотрены <span class="projects__tooltip" id="tooltip2" tabindex="0">i</span> исключительно в разрезе маркетинговых и финансовых <span class="projects__tooltip" id="tooltip3" tabindex="0">i</span> предпосылок. Банальные, но неопровержимые выводы, а также представители современных социальных резервов призывают нас к новым свершениям, которые, в свою очередь, должны быть смешаны с не уникальными данными до степени совершенной неузнаваемости. Подробнее:
+        Предварительные выводы: постоянное информационно-пропагандистское обеспечение нашей деятельности однозначно фиксирует необходимость своевременного выполнения сверхзадачи. А ещё независимые государства смешаны с не уникальными данными до степени совершенной неузнаваемости, из-за чего возрастает их статус бесполезности. Прежде всего, постоянное информационно-пропагандистское <button class="projects__tooltip" data-tippy-content="Пример современных тенденций - современная методология разработки">i</button> обеспечение нашей деятельности однозначно фиксирует необходимость экономической целесообразности принимаемых решений. И нет сомнений, что действия представителей оппозиции могут быть рассмотрены <button class="projects__tooltip" data-tippy-content="Приятно, граждане, наблюдать, как сделанные на базе аналитики выводы вызывают у вас эмоции" >i</button> исключительно в разрезе маркетинговых и финансовых <button class="projects__tooltip" data-tippy-content="В стремлении повысить качество" >i</button> предпосылок. Банальные, но неопровержимые выводы, а также представители современных социальных резервов призывают нас к новым свершениям, которые, в свою очередь, должны быть смешаны с не уникальными данными до степени совершенной неузнаваемости. Подробнее:
         <a class="projects__link projects-projects links " href="#">blanchard-art.ru/projects</a><a class="projects__link projects-main links " href="#">blanchard-art.ru</a><a class="projects__link projects-about links " href="#">blanchard-art.ru/projects/about</a>
       </p>
       <h3 class="projects__sliderTitle inside-titles">Партнеры проектов:</h3>
@@ -993,7 +998,7 @@
           </p>
         </div>
 
-        <form class="contacts__top-form" enctype="multipart/form-data" id="subscribe" action="" method="post">
+        <form class="contacts__top-form" enctype="multipart/form-data" id="subscribe" action="/" method="post">
           <input type="hidden" name="admin_email[]" value="kribedko@gmail.com">
           <input type="hidden" name="admin_email[]" value="kribedko@yandex.ru">
           <input type="hidden" name="form_subject" value="Blanchard. Заявка на обратный звонок">

@@ -61,9 +61,9 @@ document.addEventListener('DOMContentLoaded', function() {
       nextEl: ".swiper-button-nextG",
       prevEl: ".swiper-button-prevG",
     },
-    autoplay: {
-      delay: 9000,
-    },
+    // autoplay: {
+    //   delay: 9000,
+    // },
     breakpoints: {
       // // when window width is >= 320px
       320: {
@@ -96,7 +96,7 @@ document.addEventListener('DOMContentLoaded', function() {
         },
       },
       // when window width is >= 640px
-      1280: {
+      1326: {
         slidesPerView: 3,
         spaceBetween: 50,
         slidesPerGroup: 3,
@@ -128,6 +128,8 @@ document.addEventListener('DOMContentLoaded', function() {
       320: {
         slidesPerView: 1,
         slidesPerGroup: 1,
+        spaceBetween: 20,
+
       },
       576: {
         slidesPerView: 2,
@@ -303,6 +305,9 @@ document.addEventListener('DOMContentLoaded', function() {
   }
   /* search active end */
 
+  document.addEventListener('click', function(e) {
+    console.log(e.target)
+  })
 
 
   /* gallery-modal */
@@ -334,7 +339,7 @@ document.addEventListener('DOMContentLoaded', function() {
   /* catalog */
   $('#accordion').accordion({
     collapsible: true,
-    active: false,
+    active: 0,
     icons: false,
     heightStyle: "content",
 
@@ -374,17 +379,11 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 
-  tippy('#tooltip1', {
-    content: 'Пример современных тенденций - современная методология разработки',
+  tippy('.projects__tooltip', {
+    theme: 'blanchard',
+    maxWidth: 264
   });
 
-  tippy('#tooltip2', {
-    content: 'Приятно, граждане, наблюдать, как сделанные на базе аналитики выводы вызывают у вас эмоции',
-  });
-
-  tippy('#tooltip3', {
-    content: 'В стремлении повысить качество',
-  });
 
 
   /* validate form */

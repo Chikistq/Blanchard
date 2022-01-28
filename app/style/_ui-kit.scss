@@ -69,16 +69,69 @@
   outline-offset: 0;
 }
 
-.gallery__slider-img:hover::after {
+.gallery__descr-link:hover {
+  color: $outline-color;
+}
+
+.gallery__descr-link:active {
+  color: $active-color;
+}
+
+#gallery .swiper-button-prevG:hover,
+#gallery .swiper-button-nextG:hover {
+  background-color: $accent-color;
+}
+
+#gallery .swiper-button-prevG:focus,
+#gallery .swiper-button-nextG:focus {
+  outline-offset: -1px;
+  outline: 2px solid #000;
+}
+
+#gallery .swiper-button-prevG:active,
+#gallery .swiper-button-nextG:active {
+  background-color: $active-color;
+  outline: 2px solid #000;
+}
+
+#gallery .choices__list--single:hover,
+#gallery .choices__list--single:focus {
+  background-color: rgba(255, 255, 255, .2);
+}
+
+.gallery .swiper-slide:hover::after {
   content: '';
   position: absolute;
   top: 50%;
   left: 50%;
-  width: 85%;
-  height: 85%;
+  width: 80%;
+  height: 80%;
   transform: translate(-50%, -50%);
   background-size: 10px 10px, 100% 100%;
   background: url("../img/hover-gl.svg") no-repeat 50% 50%, rgba(0, 0, 0, .5);
+  pointer-events: none;
+}
+
+.gallery .swiper-slide:focus {
+  border: 3px solid $accent-color;
+}
+
+.gallery .swiper-slide:active {
+  border: 2px solid $outline-color;
+}
+
+.gallery .swiper-slide:active::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba($hover-color, .2);
+  pointer-events: none;
+
 }
 
 .accordion-item__body-link:hover {
@@ -124,7 +177,8 @@
   outline: none;
 }
 
-.ui-state-focus .accordion-item__head-title {
+.ui-state-focus .accordion-item__head-title,
+.ui-accordion-header-active .accordion-item__head-title {
   background-color: $active-color;
   color: #fff;
 }
@@ -133,41 +187,6 @@
   outline: none;
 }
 
-.gallery__descr-link:hover {
-  color: $outline-color;
-}
-
-.gallery__descr-link:active {
-  color: $active-color;
-}
-
-
-#gallery .swiper-button-prevG:hover,
-#gallery .swiper-button-nextG:hover {
-  background-color: $accent-color;
-}
-
-#gallery .swiper-button-prevG:focus,
-#gallery .swiper-button-nextG:focus {
-  outline-offset: -1px;
-  outline: 2px solid #000;
-}
-
-#gallery .swiper-button-prevG:active,
-#gallery .swiper-button-nextG:active {
-  background-color: $active-color;
-  outline: 2px solid #000;
-}
-
-.gallery .swiper-slide:focus {
-  outline-offset: 3px;
-  outline: 1px solid $accent-color;
-}
-
-#gallery .choices__list--single:hover,
-#gallery .choices__list--single:focus {
-  background-color: rgba(255, 255, 255, .2);
-}
 
 #projects .projects__btn-prev:hover,
 #projects .projects__btn-next:hover,

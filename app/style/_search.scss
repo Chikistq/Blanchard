@@ -12,6 +12,26 @@
   pointer-events: auto;
 }
 
+.header__top-search-icon {
+  position: relative;
+  top: 2px;
+  left: 1px;
+}
+.search-form__button:hover,
+.search-form__button:focus-visible,
+.search-form__button:focus {
+  outline: 1px solid $accent-color;
+  border-radius: 5px;
+}
+
+.search-form__button:active {
+  transform: scale(.9);
+  outline: none;
+}
+
+
+
+
 .search-form__input {
   margin-left: 3px;
   padding: 0 0 3px;

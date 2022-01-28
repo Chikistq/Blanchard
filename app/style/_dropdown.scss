@@ -1,15 +1,19 @@
 .dropdown {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: flex-start;
 }
 
 .dropdown__item {
   position: relative;
   left: -7px;
-  min-height: 70px;
   padding: 25px 0 17px;
+  min-height: 70px;
   color: #9d5cd0;
+}
+
+.dropdown__item:not(:last-child) {
+  margin-right: 84.5px;
 }
 
 .dropdown__item-btn {
@@ -37,6 +41,8 @@
 
 .dropdown__item-btn::after {
   content: "";
+  position: relative;
+  left: 39px;
   display: inline-block;
   width: 7px;
   height: 7px;

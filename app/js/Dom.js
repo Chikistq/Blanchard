@@ -69,7 +69,7 @@ $Dom.modal = function(eTarget) {
     `)
     document.body.appendChild(modal)
 
-    const url = eTarget.target.lastElementChild.dataset.id
+    const url = eTarget.target.dataset.id
     // const url = parseInt((eTarget.target.lastElementChild.getAttribute('src')).match(/\d+/))
     /* eslint-disable-next-line no-useless-escape */
     const u = 'img/gallery' + url + '.jpg'
