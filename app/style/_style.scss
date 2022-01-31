@@ -96,6 +96,7 @@
 .header__login {
   position: relative;
   left: 7px;
+  flex-shrink: 0;
   margin-left: auto;
   font-weight: 400;
   text-align: right;
@@ -184,7 +185,7 @@
   flex-direction: column;
   align-items: flex-start;
   padding-top: 140px;
-  padding-bottom: 120px;
+  padding-bottom: 123px;
   z-index: 5;
   pointer-events: none;
 }
@@ -199,7 +200,7 @@
 
 .header__descr {
   width: 36%;
-  margin: 0 0 90px;
+  margin: 0 0 92px;
   font-weight: 700;
   font-size: 18px;
   line-height: 30px;
@@ -211,7 +212,7 @@
 }
 
 .about-us {
-  padding: 81px 0 70px;
+  padding: 79px 0 70px;
 }
 
 .about-us__title {
@@ -338,7 +339,7 @@
 }
 
 .choices[data-type*=select-one]:after {
-  top: 48%;
+  top: 43%;
   right: 15px;
   height: 8px;
   width: 8px;
@@ -351,13 +352,14 @@
 }
 
 .choices[data-type*=select-one].is-open:after {
-  margin-top: 0;
+  margin-top: 2px;
   border-color: inherit;
   transform: rotate(225deg);
 }
 
 .gallery .swiper-slide {
   box-sizing: border-box;
+  border: 3px solid transparent;
   outline: none;
 }
 
@@ -421,7 +423,7 @@
 }
 
 .gallery .swiper-pagination {
-  top: 34px;
+  top: 33px;
   left: 102px;
   height: 20px;
   width: 50px;
@@ -687,7 +689,7 @@
 
 .events .swiper-button-prev,
 .events .swiper-button-next {
-  top: 55%;
+  top: 52%;
   width: 50px;
   height: 50px;
   border: none;

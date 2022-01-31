@@ -133,7 +133,7 @@ document.addEventListener('DOMContentLoaded', function() {
       },
       576: {
         slidesPerView: 2,
-        spaceBetween: 35.5,
+        spaceBetween: 35,
         slidesPerGroup: 2,
       },
       992: {
@@ -143,7 +143,7 @@ document.addEventListener('DOMContentLoaded', function() {
       },
       1440: {
         slidesPerView: 3,
-        spaceBetween: 49.5,
+        spaceBetween: 49,
       },
 
     }
@@ -240,7 +240,7 @@ document.addEventListener('DOMContentLoaded', function() {
   /* gallery-selects end*/
 
   /* mobile-menu */
-  document.querySelector('#burger').addEventListener('click', function(e) {
+  document.querySelector('.header__top-burger').addEventListener('click', function(e) {
     e.currentTarget.classList.toggle('open')
     $Dom('.header__top-nav-mobile').$el.classList.toggle('open')
     setTimeout(

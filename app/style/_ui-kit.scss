@@ -104,8 +104,8 @@
   position: absolute;
   top: 50%;
   left: 50%;
-  width: 80%;
-  height: 80%;
+  width: 87%;
+  height: 87%;
   transform: translate(-50%, -50%);
   background-size: 10px 10px, 100% 100%;
   background: url("../img/hover-gl.svg") no-repeat 50% 50%, rgba(0, 0, 0, .5);
@@ -117,7 +117,7 @@
 }
 
 .gallery .swiper-slide:active {
-  border: 2px solid $outline-color;
+  border: 3px solid $outline-color;
 }
 
 .gallery .swiper-slide:active::before {

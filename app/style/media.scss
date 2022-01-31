@@ -12,7 +12,6 @@
     display: none;
   }
 
-  .header__top-nav-mobile,
   .header__top-burger,
   .header__top-search-btn {
     display: inherit;
@@ -41,7 +40,7 @@
 
   .header__slider-descr {
     padding-top: 113px;
-    padding-bottom: 113px;
+    padding-bottom: 115px;
   }
 
   .header__title {
@@ -76,7 +75,8 @@
   }
 
   .about-us {
-    padding-bottom: 69px;
+    padding-bottom: 70px;
+    padding-top: 81px;
   }
 
   .about-us__descr {
@@ -274,7 +274,7 @@
 
   #gallery .swiper-button-prevG,
   #gallery .swiper-button-nextG {
-    top: 25px;
+    top: 24px;
   }
 
   .gallery .swiper-slide:hover::after {
@@ -291,7 +291,7 @@
 
   #gallery .swiper-pagination {
     left: 74px;
-    top: 33px;
+    top: 32px;
   }
 
   .gallery__modal-wrap {
@@ -304,6 +304,10 @@
 
   .gallery__modal-descr {
     width: 330px;
+  }
+
+  #gallery .choices__list--dropdown {
+    top: 39px;
   }
 }
 
