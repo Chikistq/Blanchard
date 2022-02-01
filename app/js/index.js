@@ -244,8 +244,6 @@ document.addEventListener('DOMContentLoaded', function() {
     e.currentTarget.classList.toggle('open')
     function addOpen() {
       $Dom('body').$el.style.overflow = 'hidden';
-      $Dom('.header__top-logo').$el.classList.add('deactivation-link')
-      $Dom('.header__top-search-btn').$el.classList.add('deactivation-link')
       $Dom('.header__wrap').$el.classList.add('open')
       setTimeout(
           ($Dom('.nav-mobile__btn').$el.classList.add('open'),
@@ -255,12 +253,12 @@ document.addEventListener('DOMContentLoaded', function() {
 
     function removeOpen() {
       $Dom('body').$el.style.overflow = 'auto';
-      $Dom('.header__top-logo').$el.classList.remove('deactivation-link')
-      $Dom('.header__top-search-btn').$el.classList.remove('deactivation-link')
       $Dom('.header__wrap').$el.classList.remove('open')
       $Dom('.nav-mobile__btn').$el.classList.remove('open')
       $Dom('.nav-mobile__lists').$el.classList.remove('open')
     }
+
+
 
     if (this.classList.contains('open')) {
       addOpen()
