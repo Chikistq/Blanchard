@@ -39,12 +39,11 @@ $Dom.modal = function(eTarget) {
     const modal = document.createElement('div')
     modal.classList.add('gallery__modal')
 
-
-
     modal.insertAdjacentHTML('afterbegin', `
         <div class="gallery__modal-wrap flex">
+<!--  <div class="wwwwww">-->
+        
           <div class="gallery__modal-img"></div>
-          
           <div class="gallery__modal-descr flex">
             <h3 class="gallery__modal-author">
               Казимир Малевич
@@ -66,14 +65,18 @@ $Dom.modal = function(eTarget) {
             </svg>
           </button>
         </div>
+<!--</div>-->
+        
     `)
     document.body.appendChild(modal)
 
     const url = eTarget.target.dataset.id
-    // const url = parseInt((eTarget.target.lastElementChild.getAttribute('src')).match(/\d+/))
+
     /* eslint-disable-next-line no-useless-escape */
-    const u = 'img/gallery' + url + '.jpg'
-    modal.firstElementChild.firstElementChild.style.backgroundImage = `url("${u}")`
+    // const u = 'img/gallery' + url + '.jpg'
+    const u = require(`../img/gallery/mob/mobile${url}.jpg`)
+    document.querySelector('.gallery__modal-img').style.backgroundImage = `url("${u}")`
+    // modal.firstElementChild.firstElementChild.style.backgroundImage = `url("${u}")`
 
     return modal
   }

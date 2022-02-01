@@ -178,7 +178,7 @@
 }
 
 .ui-state-focus .accordion-item__head-title,
-.ui-accordion-header-active .accordion-item__head-title {
+.ui-accordion-header-active:focus .accordion-item__head-title {
   background-color: $active-color;
   color: #fff;
 }

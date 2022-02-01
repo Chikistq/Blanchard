@@ -240,13 +240,39 @@ document.addEventListener('DOMContentLoaded', function() {
   /* gallery-selects end*/
 
   /* mobile-menu */
-  document.querySelector('.header__top-burger').addEventListener('click', function(e) {
+  document.querySelector('#burger').addEventListener('click', function(e) {
     e.currentTarget.classList.toggle('open')
-    $Dom('.header__top-nav-mobile').$el.classList.toggle('open')
-    setTimeout(
-        ($Dom('.nav-mobile__btn').$el.classList.toggle('open'),
-        $Dom('.nav-mobile__lists').$el.classList.toggle('open')
-        ), 250)
+    function addOpen() {
+      $Dom('body').$el.style.overflow = 'hidden';
+      $Dom('.header__top-logo').$el.classList.add('deactivation-link')
+      $Dom('.header__top-search-btn').$el.classList.add('deactivation-link')
+      $Dom('.header__wrap').$el.classList.add('open')
+      setTimeout(
+          ($Dom('.nav-mobile__btn').$el.classList.add('open'),
+          $Dom('.nav-mobile__lists').$el.classList.add('open')),
+          250)
+    }
+
+    function removeOpen() {
+      $Dom('body').$el.style.overflow = 'auto';
+      $Dom('.header__top-logo').$el.classList.remove('deactivation-link')
+      $Dom('.header__top-search-btn').$el.classList.remove('deactivation-link')
+      $Dom('.header__wrap').$el.classList.remove('open')
+      $Dom('.nav-mobile__btn').$el.classList.remove('open')
+      $Dom('.nav-mobile__lists').$el.classList.remove('open')
+    }
+
+    if (this.classList.contains('open')) {
+      addOpen()
+      document.querySelectorAll('.bur-close').forEach( link => {
+        link.addEventListener('click', function(ddd) {
+          document.getElementById('burger').classList.remove('open')
+          removeOpen()
+        })
+      })
+    } else {
+      removeOpen()
+    }
   })
   /* mobile-menu end */
 
@@ -305,11 +331,6 @@ document.addEventListener('DOMContentLoaded', function() {
   }
   /* search active end */
 
-  document.addEventListener('click', function(e) {
-    console.log(e.target)
-  })
-
-
   /* gallery-modal */
   document.querySelectorAll('.gallery__slider-img').forEach(el => {
     el.addEventListener('click', function(event) {
@@ -317,6 +338,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
       if (event.target.closest('.gallery__slider-img')) {
         crtModal.open()
+        $Dom('body').$el.style.overflow = 'hidden';
 
         const $modal = $Dom('.gallery__modal')
         const $exitBtn = $Dom('.gallery__modal-exit')
@@ -325,6 +347,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
           if (e.target == $modal.$el || e.target == $exitBtn.$el || e.target == $exitBtn.$el.firstElementChild) {
             crtModal.close()
+            $Dom('body').$el.style.overflow = 'auto';
             setTimeout(() => {
               crtModal.destroy()
             }, 300)
@@ -376,12 +399,13 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 
-
-
+  const docWidth = document.documentElement.offsetWidth
+  const tippyWidth = docWidth > 1200 ? 264 : 240
 
   tippy('.projects__tooltip', {
     theme: 'blanchard',
-    maxWidth: 264
+    trigger: 'click',
+    maxWidth: tippyWidth
   });
 
 
