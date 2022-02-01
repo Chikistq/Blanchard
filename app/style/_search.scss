@@ -17,6 +17,10 @@
   top: 2px;
   left: 1px;
 }
+
+.header__top-search-btn:hover,
+.header__top-search-btn:focus-visible,
+.header__top-search-btn:focus,
 .search-form__button:hover,
 .search-form__button:focus-visible,
 .search-form__button:focus {
@@ -24,6 +28,7 @@
   border-radius: 5px;
 }
 
+.header__top-search-btn:active,
 .search-form__button:active {
   transform: scale(.9);
   outline: none;
