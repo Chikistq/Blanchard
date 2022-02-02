@@ -323,9 +323,9 @@
 
 #gallery .choices__list--dropdown {
   left: -1px;
-  top: 38px;
+  top: 39px;
   padding: 0;
-  width: 101%;
+  box-sizing: content-box;
   border-radius: 6px;
   border: 1px #999 solid;
   background-color: inherit;
@@ -350,6 +350,10 @@
 #gallery .choices__list--dropdown .choices__item--selectable.is-highlighted {
   color: #fff;
   background-color: rgb(255 255 255 / 20%);
+}
+
+#gallery .choices__list--dropdown .is-selected {
+  display: none;
 }
 
 .choices[data-type*=select-one]:after {
